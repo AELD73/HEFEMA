@@ -67,11 +67,8 @@ header{
 
 
 
-@media only screen and (min-width:400px) and (max-width:900px){
+@media only screen and (min-width:100px) and (max-width:900px){
     
-    .logo{
-        margin: 2px;
-    }
     header{
         width: 100%;
         padding: 0px 20px;
@@ -91,7 +88,7 @@ header{
         width: 30px;
         height: 3px;
         background-color: #FFF;
-        margin: 6px 0px;
+        margin: 6px 0;
 
     }
 
@@ -130,34 +127,49 @@ header{
     
 }
 
+.conteiner-gift{
+    width: 100%;
+}
 
     
 .gift {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 98%;
     height: 800px;
     margin: 20px auto;
     padding: 20%;
 }
 
 
-@media only screen  and (max-width:900px){
+@media only screen and (max-width:900px){
 	.gift{
-        margin: 15px 70px;
+        margin: auto;
         height: 300px;
         width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        align-items: center;
+        
+        
     }
     .title-cards h2{
         width: 100%;
 
     }
 
+    .conteiner-gift{
+        width: 100%;
+    }
 
+}
+
+@media only screen and (max-width:780px) {
+    .gift{
+        margin: auto;
+        width: 150%;
+        height: 490px;
+
+    }
+    
 }
 
 
@@ -213,6 +225,61 @@ header{
 }
 /*Fin-Cards*/
 
+.consultoria {
+    text-align: center;
+   
+}
+.consultoria h1{
+    border-bottom: 3px solid #ff0000;
+    font-weight: 200;
+}
+.conteiner-cosultoria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    margin: 10px auto;
+    background-color: rgba(0, 118, 192, 0.4);
+}
+
+.texto-consultoria p{
+    width: 80%;
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+/*Fabricacion*/
+.fabricacion{
+    text-align: center;
+
+}
+
+.fabricacion h1{
+    border-bottom: 3px solid #ff0000;
+    font-weight: 200;
+
+}
+
+.conteiner-fabricacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    margin: 10px auto;
+    background: linear-gradient(rgba(254, 0, 0, 0.671), rgba(254, 0, 0, 0.671)) ;
+}
+
+.texto-fabricacion p{
+    width: 80%;
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+}
 /*slider*/
 .slider {
     position: relative;
@@ -474,4 +541,5 @@ form{
         margin-bottom: 20px;
     }
 }
+
 
