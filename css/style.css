@@ -355,7 +355,15 @@ header{
     width: 900px;
     margin: auto;
 }
-
+.mapa-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+.mapa-img img{
+    width: 10%;
+}
 
 /*Termina mapa*/
 
