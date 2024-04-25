@@ -134,12 +134,11 @@ header{
     
 .gift {
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
     width: 98%;
     height: 800px;
-    margin: 20px auto;
-    padding: 20%;
+    margin:  auto;
+    padding: 25%;
 }
 
 
@@ -147,7 +146,7 @@ header{
 	.gift{
         margin: auto;
         height: 300px;
-        width: 100%;
+        width: auto;
         
         
     }
@@ -180,22 +179,27 @@ header{
 
 .title-cards{
 	width: 100%;
-	max-width: 1080px;
+	
 	margin: auto;
 	padding: 20px;
 	margin-top: 20px;
 	text-align: center;
 	color: #7a7a7a;
 }
+.title-cards h1{
+    font-size: 80px;
+    border-bottom: 3px solid #ff0000;
+}
 /*Inicio CARD*/
 
 .conteiner-cartas{
-    width: 60%;
+    width: 100%;
 
     margin: auto;
 }
 
-.conteiner-cartas img{
+
+.sobreNosotros-img img{
     width: 100%;
     height: 25%;
     margin: auto;
@@ -203,11 +207,11 @@ header{
 
 .conteiner-cartas h1{
 
-    text-align: center;
+    
     margin:20px;
-    font-weight: 200;
+   
     border-bottom: 3px solid #ff0000;
-    padding-bottom: 10px;
+
 }
 
   
@@ -224,66 +228,86 @@ header{
 	}
 }
 /*Fin-Cards*/
-
-.consultoria {
-    text-align: center;
-   
-}
+/* Estilos comunes */
 .consultoria h1{
+    text-align: center;
     border-bottom: 3px solid #ff0000;
-    font-weight: 200;
+    font-size: 40px;
 }
-.conteiner-cosultoria{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 400px;
-    margin: 10px auto;
-    background-color: rgba(0, 118, 192, 0.4);
-}
-
-.texto-consultoria p{
-    width: 80%;
-    font-size: 30px;
-    margin: auto;
-    text-align: center;
-}
-
-/*Fabricacion*/
-.fabricacion{
-    text-align: center;
-
-}
-
 .fabricacion h1{
-    border-bottom: 3px solid #ff0000;
-    font-weight: 200;
-
+    text-align: center;
+    border-bottom: 3px solid #87a5ff;
+    font-size: 40px;
 }
 
-.conteiner-fabricacion{
+.consultoria,
+.fabricacion {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    height: 90vh;
+}
+
+
+/* Consultoría */
+.consultoria .conteiner-cosultoria {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 118, 192, 0.4);
+    transform: translateX(-100%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.consultoria:hover .conteiner-cosultoria {
+    transform: translateX(0);
+}
+
+/* Fabricación */
+.fabricacion .conteiner-fabricacion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(254, 0, 0, 0.671), rgba(254, 0, 0, 0.671));
+    transform: translateX(100%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.fabricacion:hover .conteiner-fabricacion {
+    transform: translateX(0);
+}
+
+/* Estilos comunes */
+.conteiner-cosultoria,
+.conteiner-fabricacion {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
-    height: 400px;
-    margin: 10px auto;
-    background: linear-gradient(rgba(254, 0, 0, 0.671), rgba(254, 0, 0, 0.671)) ;
+    text-align: center;
 }
 
-.texto-fabricacion p{
+.texto-consultoria p,
+.texto-fabricacion p {
     width: 80%;
     font-size: 30px;
     margin: auto;
-    text-align: center;
 }
+
+
+/* Eliminar hover */
+
+
 /*slider*/
 .slider {
     position: relative;
-    width: 100%; /* Ajusta según sea necesario */
+    width: 60%; /* Ajusta según sea necesario */
     height: 30%; /* Ajusta según sea necesario */
     margin: auto;
     
@@ -345,16 +369,17 @@ header{
 .mapa h1{
     text-align: center;
     margin:20px;
-    font-weight: 200;
+    font-size: 40px;
     border-bottom: 3px solid #ff0000;
     padding-bottom: 10px;
 }
 
   #map {
-    height: 500px;
+    height: 5   00px;
     width: 900px;
     margin: auto;
 }
+
 .mapa-img{
     display: flex;
     flex-direction: column;
@@ -549,5 +574,6 @@ form{
         margin-bottom: 20px;
     }
 }
+
 
 
