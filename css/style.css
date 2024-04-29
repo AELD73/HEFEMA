@@ -28,6 +28,7 @@ body{
 .bars{
     display: none;
 }
+
 header{
     width: 100%;
     height: 85px;
@@ -44,6 +45,9 @@ header{
 
 }
 
+.nav-bar.active{
+    opacity: 1;
+}
 
 .nav-bar ul {
     display: flex;
@@ -135,10 +139,10 @@ header{
 .gift {
     background-size: cover;
 
-    width: 98%;
-    height: 800px;
+    width: 100%;
+    height: 100vh;
     margin:  auto;
-    padding: 25%;
+
 }
 
 
@@ -229,15 +233,18 @@ header{
 }
 /*Fin-Cards*/
 /* Estilos comunes */
-.consultoria h1{
+.consultoria h1 {
     text-align: center;
     border-bottom: 3px solid #ff0000;
     font-size: 40px;
+    color: #fff;
 }
-.fabricacion h1{
+
+.fabricacion h1 {
     text-align: center;
     border-bottom: 3px solid #87a5ff;
     font-size: 40px;
+    color: #FFF;
 }
 
 .consultoria,
@@ -246,17 +253,35 @@ header{
     overflow: hidden;
     z-index: 1;
     height: 90vh;
+    
+}
+.consultoria{
+    background-image: url(carrusel2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fabricacion{
+    background-image: url(tren2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.consultoria p,
+.fabricacion p{
+    color: #fff;
 }
 
-
 /* Consultoría */
-.consultoria .conteiner-cosultoria {
+.conteiner-cosultoria {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 118, 192, 0.4);
+    
+    background-color: rgba(0, 118, 192, 0.4); /* Asegúrate de ajustar la transparencia */
+     /* Agrega la ruta de la imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen */
+    background-position: center; /* Ajusta la posición de la imagen */
     transform: translateX(-100%);
     z-index: -1;
     transition: transform 0.5s ease;
@@ -273,7 +298,7 @@ header{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(254, 0, 0, 0.671), rgba(254, 0, 0, 0.671));
+    background:  rgba(254, 0, 0, 0.4);
     transform: translateX(100%);
     z-index: -1;
     transition: transform 0.5s ease;
@@ -307,9 +332,9 @@ header{
 /*slider*/
 .slider {
     position: relative;
-    width: 60%; /* Ajusta según sea necesario */
+    width: 70%; /* Ajusta según sea necesario */
     height: 30%; /* Ajusta según sea necesario */
-    margin: auto;
+    margin: 10px;
     
 }
 
@@ -328,7 +353,6 @@ header{
     width: 60%; /* Ajusta según sea necesario */
     height: auto; /* Ajusta según sea necesario */
     border-radius: 20px;
-    margin: auto;
     
 }
 
@@ -361,8 +385,8 @@ header{
 
 .mapa{
     width: 100%;
-    height: 100% ;
-    margin: auto;
+    height: 100vh;
+    margin: 40px;
     font-family: 'Arial';
     
 }
@@ -374,8 +398,8 @@ header{
     padding-bottom: 10px;
 }
 
-  #map {
-    height: 5   00px;
+#map {
+    height: 500px;
     width: 900px;
     margin: auto;
 }
@@ -385,9 +409,11 @@ header{
     flex-direction: column;
     align-items: center;
     margin: auto;
+    
 }
 .mapa-img img{
     width: 10%;
+    
 }
 
 /*Termina mapa*/
@@ -396,7 +422,7 @@ header{
 
 .contaniner{
     max-width: 100%;
-    
+    margin: 10px;
 }
 
 .footer{
@@ -574,6 +600,8 @@ form{
         margin-bottom: 20px;
     }
 }
+
+
 
 
 
