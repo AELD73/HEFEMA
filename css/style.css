@@ -332,7 +332,7 @@ header{
 /*slider*/
 .slider {
     position: relative;
-    width: 70%; /* Ajusta según sea necesario */
+    width: 30%; /* Ajusta según sea necesario */
     height: 30%; /* Ajusta según sea necesario */
     margin: 10px;
     
