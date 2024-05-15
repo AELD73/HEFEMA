@@ -1,20 +1,39 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let sliderInner = document.querySelector(".slider-inner");
-    let slides = sliderInner.querySelectorAll(".slide");
+  const thumbnailsContainer = document.querySelector('.slider-thumbnails');
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  
+    const images = document.querySelectorAll('.slider-images img');
+    const overlay = document.querySelector('.overlay');
+    const overlayImage = overlay.querySelector('img');
+  const thumbnailWidth = thumbnails[0].offsetWidth;
+  const thumbnailsCount = thumbnails.length;
+  let currentIndex = 0;
 
-    let index = 0;
-    let totalSlides = slides.length;
+  // Función para desplazar las miniaturas automáticamente
+  function moveThumbnails() {
+    currentIndex = (currentIndex + 1) % thumbnailsCount;
+    const offset =-(currentIndex * thumbnailWidth);
+    thumbnailsContainer.style.transform = `translateX(${offset}px)`;
+    setTimeout(moveThumbnails, 5000); // Cambia la miniatura cada 2 segundos
+  }
 
-    function showNextSlide() {
-        slides[index].style.display = "none";
-        index = (index + 1) % totalSlides;
-        slides[index].style.display = "block";
-    }
+  moveThumbnails(); // Iniciar el movimiento automático de las miniaturas
 
-    // Ocultar todas las diapositivas excepto la primera
-    for (let i = 1; i < totalSlides; i++) {
-        slides[i].style.display = "none";
-    }
+  //Código correspondiente para hacer click sobre la 
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+      currentIndex = index;
+    });
+  });
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+      overlayImage.src = images[index].src;
+      overlay.style.display = 'flex';
+    });
+  });
+  overlay.addEventListener('click', () => {
+    overlay.style.display = 'none';
+  });
 
-    setInterval(showNextSlide, 3000);
+  
 });
