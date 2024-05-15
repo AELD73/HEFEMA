@@ -3,11 +3,10 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 body{
     font-family: Arial;
-    margin: 0;
 }
 .logo{
     padding: 10px;
@@ -23,11 +22,9 @@ body{
 .logo p{
     font-size: 15px;
         
-        
+            
 }
-.bars{
-    display: none;
-}
+
 
 header{
     width: 100%;
@@ -38,40 +35,38 @@ header{
     align-items: center;
     
         
-    padding: 0px 30px;
+    padding: 0px 100px;
     position: fixed; /* Añadimos posición fija */
     top: 0; /* Anclamos en la parte superior */
     z-index: 999; /* Aseguramos que esté por encima de otros elementos */
 
 }
-
-.nav-bar.active{
-    opacity: 1;
+.bars{
+    display: none;
 }
-
 .nav-bar ul {
     display: flex;
 }
-
 .nav-bar ul li a {
     display: block;
     color: #FFFF;
     font-size: 18px;
     padding: 10px 25px;
-    
+    transition: 0.2s;
     margin: 0 5px;
         
 }
 
 .nav-bar ul li a:hover{
-
     color: #000;
     border-bottom: 4px solid #ff0000;
 }
 
-
-
-@media only screen and (min-width:100px) and (max-width:900px){
+.nav-bar ul li a.active{    
+    color: #000;
+    border-bottom: 4px solid #ff0000;
+}
+@media only screen and (max-width:900px){
     
     header{
         width: 100%;
@@ -108,7 +103,9 @@ header{
         overflow: hidden;
 
     }
-
+    .nav-bar.active{
+        height: 450px;
+    }   
         
 
     .nav-bar ul{
@@ -131,49 +128,32 @@ header{
     
 }
 
-.conteiner-gift{
-    width: 100%;
-}
 
-    
 .gift {
-    background-size: cover;
-
-    width: 100%;
-    height: 100vh;
-    margin:  auto;
-
+    width: 100%; /* El ancho ocupa todo el contenedor padre */
+    max-width: 100%; /* Se asegura de que no exceda el ancho del contenedor padre */
+    height: 70vh; /* Permite que la altura se ajuste automáticamente según el ancho */
+    display: block;
+    margin-top: 80px; /* Espacio superior, ajusta según sea necesario */
+    margin-right: auto; /* Centra horizontalmente */
+    margin-bottom: 0; /* Elimina el margen inferior */
+    margin-left: auto; /* Centra horizontalmente */
+}
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 900px) {
+    .gift {
+        margin-top: 85px; /* Ajusta el margen superior para dejar espacio para el encabezado */
+    }
 }
 
-
-@media only screen and (max-width:900px){
-	.gift{
-        margin: auto;
-        height: 300px;
-        width: auto;
-        
-        
+@media only screen and (max-width: 480px) {
+    .gift {
+        width: 100%; /* Ajusta el ancho al 100% para que se adapte al ancho del dispositivo */
+        max-width: none; /* Elimina la restricción de ancho máximo */
+        margin-top: 50px; /* Reduce el margen superior en dispositivos móviles */
     }
-    .title-cards h2{
-        width: 100%;
-
-    }
-
-    .conteiner-gift{
-        width: 100%;
-    }
-
 }
 
-@media only screen and (max-width:780px) {
-    .gift{
-        margin: auto;
-        width: 150%;
-        height: 490px;
-
-    }
-    
-}
 
 
 
@@ -181,28 +161,12 @@ header{
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 /*Cards*/
 
-.title-cards{
-	width: 100%;
-	
-	margin: auto;
-	padding: 20px;
-	margin-top: 20px;
-	text-align: center;
-	color: #7a7a7a;
-}
-.title-cards h1{
-    font-size: 80px;
-    border-bottom: 3px solid #ff0000;
-}
 /*Inicio CARD*/
 
 .conteiner-cartas{
     width: 100%;
-
     margin: auto;
 }
-
-
 .sobreNosotros-img img{
     width: 100%;
     height: 25%;
@@ -210,209 +174,205 @@ header{
 }
 
 .conteiner-cartas h1{
-
-    
-    margin:20px;
-   
+    margin:auto;
     border-bottom: 3px solid #ff0000;
-
 }
-
-  
 
 /*FIn CARD*/
 
-@media only screen and (min-width:800px) and (max-width:900px){
-	
-    
+@media only screen and (min-width:100px) and (max-width:900px){   
     .container-card{
-		flex-wrap: wrap;
         width: 100%;
 
 	}
 }
 /*Fin-Cards*/
 /* Estilos comunes */
-.consultoria h1 {
-    text-align: center;
-    border-bottom: 3px solid #ff0000;
-    font-size: 40px;
-    color: #fff;
-}
-
-.fabricacion h1 {
-    text-align: center;
-    border-bottom: 3px solid #87a5ff;
-    font-size: 40px;
-    color: #FFF;
-}
-
-.consultoria,
-.fabricacion {
+.contenedor-consultoria{
     position: relative;
+    height: 300px;
     overflow: hidden;
-    z-index: 1;
-    height: 90vh;
-    
-}
-.consultoria{
-    background-image: url(carrusel2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.fabricacion{
-    background-image: url(tren2.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.consultoria p,
-.fabricacion p{
-    color: #fff;
+    margin:  auto;
+    background-color: rgba(254, 0, 0, 0.67);
 }
 
-/* Consultoría */
-.conteiner-cosultoria {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    background-color: rgba(0, 118, 192, 0.4); /* Asegúrate de ajustar la transparencia */
-     /* Agrega la ruta de la imagen */
-    background-size: cover; /* Ajusta el tamaño de la imagen */
-    background-position: center; /* Ajusta la posición de la imagen */
-    transform: translateX(-100%);
-    z-index: -1;
-    transition: transform 0.5s ease;
-}
-
-.consultoria:hover .conteiner-cosultoria {
-    transform: translateX(0);
-}
-
-/* Fabricación */
-.fabricacion .conteiner-fabricacion {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:  rgba(254, 0, 0, 0.4);
-    transform: translateX(100%);
-    z-index: -1;
-    transition: transform 0.5s ease;
-}
-
-.fabricacion:hover .conteiner-fabricacion {
-    transform: translateX(0);
-}
-
-/* Estilos comunes */
-.conteiner-cosultoria,
-.conteiner-fabricacion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.texto-consultoria p,
-.texto-fabricacion p {
-    width: 80%;
-    font-size: 30px;
+.contenedor-fabricacion{
+    position: relative;
+    height: 300px;
+    overflow: hidden;
     margin: auto;
+    background-color: rgba(0, 118, 192, 0.781);
 }
-
-
-/* Eliminar hover */
-
-
-/*slider*/
-.slider {
-    position: relative;
-    width: 30%; /* Ajusta según sea necesario */
-    height: 30%; /* Ajusta según sea necesario */
-    margin: 10px;
-    
-}
-
-.slider h1{
-    text-align: center;
-    margin:20px;
-    font-weight: 200;
-    border-bottom: 3px solid #ff0000;
-    padding-bottom: 10px;
-}
-
-.slider-inner {
-    position: relative; /* Establece posición relativa para que el texto pueda ser posicionado absolutamente */
-    display: flex;
-    overflow: hidden;
-    width: 60%; /* Ajusta según sea necesario */
-    height: auto; /* Ajusta según sea necesario */
-    border-radius: 20px;
-    
-}
-
-.slide {
-    position: relative;
-    width: 100%; /* Ajusta según sea necesario */
-    height: auto; /* Ajusta según sea necesario */
-
-}
-
-.slide img {
+.consultoria-parallax{
+    position: absolute;
     width: 100%;
-    height: auto;
-    display: block;
-    
+    background-image: url(carrusel1.jpg);
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+}
+.fabricacion-parallax{
+    position: absolute;
+    width: 100%;
+    background-image: url(carrusel2.jpg);
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
 }
 
-@media only screen  and (min-width:800px) and (max-width:900px) {
-    .slider{
-        width: 900px;
-        margin: auto
-        
+.texto-consultoria{
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    margin: 5% 10%;
+}
+.texto-fabricacion{
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    margin: 5% 10%;
+}
+.title-consultoria{
+    font-size: 3em;
+    text-align: center;
+    margin-top: 10%;
+
+}
+.title-fabricacion{
+    font-size: 3em;
+    text-align: center;
+    margin-top: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+    .contenedor-consultoria,
+    .contenedor-fabricacion {
+        height: auto; /* Cambiamos la altura a 'auto' para que se ajuste dinámicamente */
+    }
+
+    .texto-consultoria,
+    .texto-fabricacion,
+    .title-consultoria,
+    .title-fabricacion {
+        font-size: 1.5em; /* Reducimos el tamaño del texto para dispositivos más pequeños */
     }
 }
 
 
+
+/*slider*/
+.slider-container {
+    width: 80%;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    
+  }
+
+  .slider-thumbnails {
+    display: flex;
+    
+    margin-bottom: 10px;
+    overflow: hidden;
+     /* Evita que las miniaturas se envuelvan a una nueva línea */
+    
+  }
+
+  .thumbnail {
+    cursor: pointer;
+    margin: 0 5px;
+  }
+
+  .thumbnail img {
+    width: 100px; /* Ajusta el tamaño de las miniaturas según sea necesario */
+    height: 70px;
+    object-fit: cover;
+  }
+
+  .slider-images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .slider-images img {
+    max-width: 100%;
+    display: none;
+    
+  }
+
+  .slider-images img.active {
+    display: block;
+  }
+
+  /* Estilos para el overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Color de fondo semi-transparente */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Coloca el overlay por encima de todo */
+  }
+
+  .overlay img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: 768px) {
+    .slider-container {
+        width: 100%; /* Cambia el ancho del contenedor al 100% para que se ajuste al ancho del dispositivo */
+        margin: 10px auto; /* Reducir el margen para dispositivos pequeños */
+    }
+    
+    .slider-thumbnails {
+        justify-content: center; /* Centra las miniaturas */
+    }
+    
+    .thumbnail {
+        margin: 0 3px; /* Reducir el margen entre las miniaturas */
+    }
+    
+    .overlay img {
+        max-width: 90%; /* Ajusta el tamaño del overlay para dispositivos pequeños */
+        max-height: 90%;
+    }
+}
 /*Fin slider*/
 
 /*Inicia mapa*/
 
 .mapa{
     width: 100%;
-    height: 100vh;
-    margin: 40px;
-    font-family: 'Arial';
-    
+    margin: 10px auto;
+    text-align: center;
 }
 .mapa h1{
     text-align: center;
-    margin:20px;
-    font-size: 40px;
+    margin:20px 0 15px 0;
+    font-weight: 200;
     border-bottom: 3px solid #ff0000;
     padding-bottom: 10px;
 }
 
 #map {
     height: 500px;
-    width: 900px;
-    margin: auto;
+    max-width: 60%;
+    margin: 0 auto;
 }
-
-.mapa-img{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
+@media  only screen and (max-width:900px){
     
-}
-.mapa-img img{
-    width: 10%;
+    #mapa{
+        
+        height: 300px;
+        
+    }
     
 }
 
@@ -427,7 +387,8 @@ header{
 
 .footer{
     background-color: #87a5ff;
-    padding: 80px 0;
+    padding: 80px;
+    width: 100%;
 }
 
 .footer-row{
@@ -502,24 +463,22 @@ form{
 
 .form-content input{
     padding: 17px 14px;
-    
+    border-radius: 10px;
     font-size: 20px;
     margin-bottom: 20px;
     background: transparent;
-    
+    border: 3px solid #fff;
     width: 350px;
     height: 60px;
     outline: none;
-    border: none;
-    border-bottom   : 3px solid #fff;
 }
 
 .form-content textarea{
     margin-bottom: 20px;
+    border-radius: 10px;
     font-size: 20px;
     background: transparent;
-    border: none;
-    border-bottom: 3px solid #FFF;
+    border: 3px solid #FFF;
     outline: none;
     padding: 10px 17px;
     width: 350px;
@@ -583,7 +542,7 @@ form{
     transition: 0.3s ;
 }
 
-@media  only screen and (min-width:400px) and (max-width:900px){
+@media  only screen and (min-width:100px) and (max-width:900px){
 
 
     .footer{
@@ -600,8 +559,5 @@ form{
         margin-bottom: 20px;
     }
 }
-
-
-
 
 
