@@ -23,11 +23,10 @@ body{
 .logo p{
     font-size: 15px;
         
-        
+            
 }
-.bars{
-    display: none;
-}
+
+
 header{
     width: 100%;
     height: 85px;
@@ -35,44 +34,41 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
+    
         
-    padding: 0px 30px;
+    padding: 0px 100px;
     position: fixed; /* Añadimos posición fija */
     top: 0; /* Anclamos en la parte superior */
     z-index: 999; /* Aseguramos que esté por encima de otros elementos */
 
 }
-
-
+.bars{
+    display: none;
+}
 .nav-bar ul {
     display: flex;
 }
-
 .nav-bar ul li a {
     display: block;
     color: #FFFF;
     font-size: 18px;
     padding: 10px 25px;
-        
-        
+    transition: 0.2s;
     margin: 0 5px;
         
 }
 
 .nav-bar ul li a:hover{
-
     color: #000;
     border-bottom: 4px solid #ff0000;
 }
 
-
-
-@media only screen and (min-width:400px) and (max-width:900px){
+.nav-bar ul li a.active{    
+    color: #000;
+    border-bottom: 4px solid #ff0000;
+}
+@media only screen and (max-width:900px){
     
-    .logo{
-        margin: 2px;
-    }
     header{
         width: 100%;
         padding: 0px 20px;
@@ -92,7 +88,7 @@ header{
         width: 30px;
         height: 3px;
         background-color: #FFF;
-        margin: 6px 0px;
+        margin: 6px 0;
 
     }
 
@@ -108,7 +104,9 @@ header{
         overflow: hidden;
 
     }
-
+    .nav-bar.active{
+        height: 450px;
+    }   
         
 
     .nav-bar ul{
@@ -130,7 +128,6 @@ header{
     }
     
 }
-
 .galeria{
     font-family: 'arial';
     margin: 150px auto;
@@ -149,7 +146,7 @@ header{
 
 .contenedor-imagenes{
     display:flex;
-    width: 85%;
+    width: 60%;
     margin: auto;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -239,12 +236,13 @@ header{
 
 .contaniner{
     max-width: 1200px;
-    
+    margin: 10px;
 }
 
 .footer{
     background-color: #87a5ff;
-    padding: 80px 0;
+    padding: 80px;
+    width: 100%;
 }
 
 .footer-row{
@@ -369,6 +367,34 @@ form{
     background-color: #87a5ff;
 }
 
+.btn1{
+    width: 70%;
+    height: 40px;
+    border: none;
+    border: 2px solid #ff0000;
+    background: transparent;
+    z-index: 1;
+}
+.btn1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: 0;
+    top: -200%;
+    
+    border-radius: 50%;
+    z-index: -1;
+    
+    
+}
+
+.btn1:hover{
+    top: 0;
+    border-radius: 0%;
+    background-color: rgba(254, 0, 0, 0.671);
+    transition: 0.3s ;
+}
 
 
 
@@ -388,5 +414,4 @@ form{
         margin-bottom: 20px;
     }
 }
-
 
