@@ -209,14 +209,14 @@ header {
         justify-content: center;
         align-items: center;
         text-align: center;
-        height: 100vh;
+        height: 80vh;
     }
 
     .text-slide-left, .text-slide-right {
         width: 90%; /* Ajusta el ancho de las cajas en móviles */
         margin:  0; /* Espacio entre las cajas */
         font-size: 15px;
-
+        height: 40vh;
     }
 
     .text-slide-left {
@@ -227,8 +227,6 @@ header {
         transform: translateY(100%);
     }
 }
-
-
 /*CSS slider*/
 .slider-container {
     
