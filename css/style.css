@@ -151,12 +151,11 @@ header {
 @media only screen and (min-width: 100px) and (max-width: 900px) {
     .conteiner-cartas img{
         max-width: 100%;
-        height: 300px;
+        height: 35vh;
     }
 
     .sobreNosotros-img img{
         width: 100%;
-        height: 250px;
         
     }
     
