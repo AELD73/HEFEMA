@@ -8,6 +8,7 @@
 body {
     font-family: Arial;
     overflow-x: hidden; /* Previene desbordamiento horizontal */
+    background-image: url(webb.png);
 }
 .logo {
     padding: 10px;
@@ -117,26 +118,125 @@ header {
         border-right: none; /* Eliminamos la barra roja en la vista móvil */
     }
 }
+
+.gift-container {
+    margin-top: 87px;
+    margin-bottom: 5px;
+    height: 75vh;
+    width: 100vw;
+    overflow: hidden; /* Para ocultar cualquier desbordamiento */
+}
 .gift {
     width: 100%;
-    max-height: 90vh;
-    display: block;
-    margin-top: 87px;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto;
+    height: 100%;
+    object-fit: contain;
 }
-@media only screen and (max-width: 900px) {
-    .gift {
-        margin-top: 90px;
+@media (max-width: 768px) {
+    .gift-container {
+       
+        height: 60vh; /* Ajusta la altura para móviles */
     }
 }
-@media only screen and (max-width: 480px) {
-    .gift {
-        max-width: 100%;
-        height: 30vh;
+@media (max-width: 480px) {
+    .gift-container {
+        height: 50vh; /* Ajusta la altura para pantallas más pequeñas */
     }
 }
+/*CSS slider*/
+.slider-container {
+    overflow: hidden;
+    position: relative;
+    background-image: url('riel 2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .slider-images {
+    display: flex;
+    width: 100%;
+  }
+  
+  .slider-images img {
+    max-width: 10%;
+    height: 15vh;
+    margin: 10px;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .slider-images {
+    animation: slide 65s linear infinite;
+  }
+  
+  .overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    z-index: 999;
+  }
+  
+  .overlay img {
+    max-width: 80%;
+    max-height: 90%;
+    object-fit: cover;
+  }
+  
+  .overlay-text {
+    margin-top: 10px;
+    font-size: 26px;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .slider-container {
+      width: 100%;
+      margin: 10px auto;
+      background-size: 400%;
+    }
+    .slider-thumbnails {
+      justify-content: center;
+    }
+    .thumbnail {
+      margin: 0 3px;
+    }
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .slider-images img {
+      max-width: 100px;
+      height: 100px;
+      margin: 10px;
+    }
+    .slider-images {
+      animation: slide 105s linear infinite; /* Ajusta la duración de la animación */
+    }
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-2500%);
+      }
+    }
+  }
+  
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 .conteiner-cartas {
@@ -223,91 +323,9 @@ header {
         transform: translateY(100%);
     }
 }
-/*CSS slider*/
-.slider-container {
-    overflow: hidden;
-    position: relative;
-    background-image: url(riel\ 2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  
-  .slider-images {
-    display: flex;
-    width: 100%;
-  }
-  
-  .slider-images img {
-    max-width: 10%;
-    height: 15vh;
-    margin: 10px;
-  }
-  
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
-  .slider-images {
-    animation: slide 65s linear infinite;
-  }
-  
-  .overlay {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-    z-index: 999;
-  }
-  
-  .overlay img {
-    max-width: 80%;
-    max-height: 90%;
-    object-fit: cover;
-  }
-  
-  .overlay-text {
-    margin-top: 10px;
-    font-size: 26px;
-    text-align: center;
-    
-  }
-  
-@media screen and (max-width: 768px) {
-    .slider-container {
-        width: 100%;
-        margin: 10px auto;
-        background-size: 400%;
-    }
-    .slider-thumbnails {
-        justify-content: center;
-    }
-    .thumbnail {
-        margin: 0 3px;
-    }
-    .overlay img {
-        max-width: 90%;
-        max-height: 90%;
-    }
-    .slider-images img {
-        max-width: 100px;
-        height: 100px;
-        margin: 10px;
-        object-fit: cover;
-    }
-}
+
+
+
 .mapa {
     width: 100%;
     margin: 10px auto;
