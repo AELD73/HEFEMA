@@ -233,7 +233,8 @@ header {
 @media screen and (max-width: 768px) {
     .slider-container {
         width: 100%;
-        margin: 10px auto;
+        height: 15vh;
+        margin: 10px;
         background-size: cover; /* Ajusta la imagen sin recortarla */
     }
     .slider-thumbnails {
@@ -247,13 +248,12 @@ header {
         max-height: 90%;
     }
     .slider-images img {
-        max-width: 100px;
-        height: 100px;
-        margin: 10px;
+        max-width: 80px;
+        height: 80px;
+        
     }
     .slider-images {
         animation: slide 105s linear infinite; /* Ajusta la duración de la animación */
-        align-items: center;
         
     }
     @keyframes slide {
@@ -265,7 +265,6 @@ header {
         }
     }
 }
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 .conteiner-cartas {
