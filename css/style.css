@@ -254,7 +254,7 @@ header {
     .slider-images {
         animation: slide 105s linear infinite; /* Ajusta la duración de la animación */
         align-items: center;
-        margin: auto;
+        
     }
     @keyframes slide {
         0% {
