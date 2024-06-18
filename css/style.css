@@ -256,7 +256,7 @@ header {
     }
     .slider-images {
         animation: slide 75s linear infinite;
-        margin: 30px auto;
+        margin: 35px auto;
     }
 }
 
@@ -271,7 +271,7 @@ header {
     }
     .slider-images {
         animation: slide 205s linear infinite;
-        margin: 35px auto;
+        margin: 40px auto;
     }
     @keyframes slide {
         0% {
@@ -295,7 +295,7 @@ header {
     }
     .slider-images {
         animation: slide 95s linear infinite;
-        margin: 50px auto;
+        margin: 55px auto;
     }
     @keyframes slide {
         0% {
@@ -318,7 +318,7 @@ header {
     }
     .slider-images {
         animation: slide 105s linear infinite;
-        margin: 10px auto;  
+        margin: 15px auto;  
     }
 }
 
