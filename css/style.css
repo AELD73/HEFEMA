@@ -120,14 +120,16 @@ header {
 }
 
 .gift-container {
-    margin-top: 87px;
+    margin-top: 90px;
     margin-bottom: 5px;
-    height: 75vh;
+    height: 60vh;
     width: 100vw;
     overflow: hidden; /* Para ocultar cualquier desbordamiento */
+    text-align: center;
 }
 .gift {
-    width: 100%;
+    
+    width: 60%;
     height: 100%;
     object-fit: contain;
 }
@@ -175,7 +177,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 30vh; /* Puedes ajustar esta altura según necesites */
+    height: 20vh; /* Puedes ajustar esta altura según necesites */
 }
 
 .slider-images {
@@ -201,7 +203,7 @@ header {
 
 .slider-images {
     animation: slide 65s linear infinite;
-    margin: 45px auto;
+    margin: 15px auto;
 }
 
 .overlay {
