@@ -170,7 +170,7 @@ header {
     overflow: hidden;
     position: relative;
     background-image: url('riel 2.png');
-    background-size: contain; /* Ajusta la imagen sin recortarla */
+    background-size: cover; /* Ajusta la imagen sin recortarla */
     background-repeat: no-repeat;
     background-position: center;
     height: 20vh;
