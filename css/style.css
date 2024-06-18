@@ -137,36 +137,48 @@ header {
 @media (max-width: 768px) {
     .gift-container {
         margin-top: 90px; /* Reduce el margen superior para acercar el gift al slider en móviles */
-        height: 60vh; /* Ajusta la altura para móviles */
+        height: 40vh; /* Ajusta la altura para móviles */
     }
     .slider-container {
     margin-top: 0;
     margin-bottom: 0;
     }
-    
+    .gift{
+        width: 100%;
+        height: 100%;
+    }
   
 }
 @media (max-width: 480px) {
     .gift-container {
         margin-top: 75px; /* Reduce aún más el margen superior en pantallas más pequeñas */
         height: 35vh; /* Ajusta la altura para pantallas más pequeñas */
-        
+    
     }
     .slider-container {
         margin-top: 20px; /* Asegura que no haya margen superior en pantallas más pequeñas */
         margin-bottom: 20px; /* Asegura que no haya margen inferior en pantallas más pequeñas */
         
+    }
+    .gift{
+        width: 100%;
+        height: 100%;
     }
 }
 @media (max-width: 300px) {
     .gift-container {
-        margin-top: 90px; /* Reduce aún más el margen superior en pantallas más pequeñas */
-        height: 20vh; /* Ajusta la altura para pantallas más pequeñas */
-        
+        margin-top: 60px; /* Reduce aún más el margen superior en pantallas más pequeñas */
+        height: 40vh; /* Ajusta la altura para pantallas más pequeñas */
+        min-width: 100%;
     }
     .slider-container {
-        margin-top: 20px; /* Asegura que no haya margen superior en pantallas más pequeñas */
-        margin-bottom: 20px; /* Asegura que no haya margen inferior en pantallas más pequeñas */
+        margin-top: 0px; /* Asegura que no haya margen superior en pantallas más pequeñas */
+        margin-bottom: 0px; /* Asegura que no haya margen inferior en pantallas más pequeñas */
+    }
+    .gift{
+        width: 100%;
+        height: 100%;
+        
     }
 }
 /*CSS slider*/
@@ -297,19 +309,18 @@ header {
 
 @media screen and (max-width: 320px) {
     .slider-container {
-        height: 40vh;
+        height: 20vh;
         background-size: cover;
     }
     .slider-images img {
-        max-width: 30%;
-        min-height: 16vh;
+        max-width: 10%;
+        min-height: 10vh;
     }
     .slider-images {
         animation: slide 105s linear infinite;
-        margin: 60px auto;  
+        margin: 10px auto;  
     }
 }
-
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
