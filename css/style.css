@@ -292,7 +292,6 @@ header {
         }
     }
 }
-
 @media screen and (max-width: 320px) {
     .slider-container {
         height: 40vh;
@@ -300,12 +299,14 @@ header {
     }
     .slider-images img {
         max-width: 30%;
-        height: 6vh;
+        min-height: 16vh;
     }
     .slider-images {
         animation: slide 105s linear infinite;
+        margin: 53px auto;  
     }
 }
+
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
