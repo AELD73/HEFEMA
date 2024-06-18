@@ -201,7 +201,7 @@ header {
 
 .slider-images {
     animation: slide 65s linear infinite;
-    margin: 40px auto;
+    margin: 45px auto;
 }
 
 .overlay {
@@ -242,7 +242,7 @@ header {
     }
     .slider-images {
         animation: slide 75s linear infinite;
-        margin: 25px auto;
+        margin: 30px auto;
     }
 }
 
@@ -257,7 +257,7 @@ header {
     }
     .slider-images {
         animation: slide 205s linear infinite;
-        margin: 30px auto;
+        margin: 35px auto;
     }
     @keyframes slide {
         0% {
@@ -281,7 +281,7 @@ header {
     }
     .slider-images {
         animation: slide 95s linear infinite;
-        margin: 45px auto;
+        margin: 50px auto;
     }
     @keyframes slide {
         0% {
@@ -292,6 +292,7 @@ header {
         }
     }
 }
+
 @media screen and (max-width: 320px) {
     .slider-container {
         height: 40vh;
@@ -303,7 +304,7 @@ header {
     }
     .slider-images {
         animation: slide 105s linear infinite;
-        margin: 53px auto;  
+        margin: 60px auto;  
     }
 }
 
