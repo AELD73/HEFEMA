@@ -172,21 +172,21 @@ header {
     overflow: hidden;
     position: relative;
     background-image: url('riel 2.png');
-    background-size: cover; /* Ajusta la imagen sin recortarla */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 20vh;
-    
+    height: 30vh; /* Puedes ajustar esta altura según necesites */
 }
 
 .slider-images {
     display: flex;
     width: 100%;
+    align-items: center; /* Centra verticalmente las imágenes */
 }
 
 .slider-images img {
     max-width: 10%;
-    height: 15vh;
+    height: 14vh; /* Ajusta la altura según necesites */
     margin: 10px;
 }
 
@@ -195,12 +195,13 @@ header {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     }
 }
 
 .slider-images {
     animation: slide 65s linear infinite;
+    margin: 40px auto;
 }
 
 .overlay {
@@ -229,6 +230,7 @@ header {
     font-size: 26px;
     text-align: center;
 }
+
 @media screen and (max-width: 1024px) {
     .slider-container {
         height: 25vh;
@@ -240,6 +242,7 @@ header {
     }
     .slider-images {
         animation: slide 75s linear infinite;
+        margin: 25px auto;
     }
 }
 
@@ -249,12 +252,22 @@ header {
         background-size: cover;
     }
     .slider-images img {
-        max-width: 20%;
-        height: 10vh;
+        min-width: 20%;
+        min-height: 15vh;
     }
     .slider-images {
-        animation: slide 85s linear infinite;
+        animation: slide 205s linear infinite;
+        margin: 30px auto;
     }
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-1300%);
+        }
+    }
+    
 }
 
 @media screen and (max-width: 480px) {
@@ -264,10 +277,19 @@ header {
     }
     .slider-images img {
         max-width: 25%;
-        height: 8vh;
+        min-height: 15vh;
     }
     .slider-images {
         animation: slide 95s linear infinite;
+        margin: 45px auto;
+    }
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-1500%);
+        }
     }
 }
 
@@ -284,6 +306,7 @@ header {
         animation: slide 105s linear infinite;
     }
 }
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 .conteiner-cartas {
