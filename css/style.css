@@ -252,9 +252,8 @@ header {
         
     }
     .slider-images {
-        animation: slide 105s linear infinite; /* Ajusta la duración de la animación */
-        
-        margin: 20px auto;
+        animation: slide 175s linear infinite; /* Ajusta la duración de la animación */
+        margin: 30px auto;
     }
     @keyframes slide {
         0% {
