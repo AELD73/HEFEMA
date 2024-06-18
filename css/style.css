@@ -248,12 +248,12 @@ header {
     }
     .slider-images img {
         max-width: 100px;
-        height: 55px;
+        height: 80px;
         
     }
     .slider-images {
         animation: slide 175s linear infinite; /* Ajusta la duración de la animación */
-        margin: 30px auto;
+        margin: 50px auto;
     }
     @keyframes slide {
         0% {
