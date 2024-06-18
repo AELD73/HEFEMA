@@ -345,86 +345,171 @@ header {
     }
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+.mapa {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
 }
-
+.mapa h1 {
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-weight: 200;
+    border-bottom: 3px solid #ff0000;
+    padding-bottom: 10px;
+}
+#map {
+    height: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+}
 @media only screen and (max-width: 900px) {
-    form {
-        width: 100%;
-    }
-    .btn1 {
-        width: 100%;
+    #mapa {
+        max-width: 100%;
     }
 }
-
+.contaniner {
+    max-width: 100%;
+    margin: 10px;
+}
 .footer {
     background-color: #87a5ff;
     padding: 80px;
     width: 100%;
 }
-
 .footer-row {
     display: flex;
     flex-wrap: wrap;
 }
-
 .footer-links {
     width: 30%;
     padding: 0 15px;
     margin: 0 auto;
 }
-
+.footer-links h4 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 3px solid #ff0000;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.footer-links ul li {
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+.footer-links ul li:hover {
+    padding-left: 10px;
+    color: #fff;
+}
+.social-links a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all .5s ease;
+    align-items: center;
+}
+.social-links a:hover {
+    background-color: #507cfd;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.form-content {
+    position: relative;
+}
+.form-content input {
+    padding: 17px 14px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: 3px solid #fff;
+    width: 100%; /* Cambiado a 100% */
+    height: 60px;
+    outline: none;
+}
+.form-content textarea {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    background: transparent;
+    border: 3px solid #fff;
+    outline: none;
+    padding: 10px 17px;
+    width: 100%; /* Cambiado a 100% */
+}
+.form-content label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #000;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.form-content input:focus ~ label,
+.form-content textarea:focus ~ label {
+    top: 0;
+    left: 15px;
+    font-size: 16px;
+    padding: 0 2px;
+    background-color: #87a5ff;
+}
+.btn1 {
+    width: 70%;
+    height: 40px;
+    border: none;
+    border: 2px solid #ff0000;
+    background: transparent;
+    z-index: 1;
+    position: relative; /* Añadido */
+}
+.btn1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: 0;
+    top: -200%;
+    border-radius: 50%;
+    z-index: -1;
+}
+.btn1:hover {
+    top: 0;
+    border-radius: 0%;
+    background-color: rgba(254, 0, 0, 0.671);
+    transition: 0.3s;
+}
 @media only screen and (max-width: 900px) {
     .footer {
-        padding: 40px 10px;
+        padding: 40px 10px; /* Ajustado padding para pantallas pequeñas */
     }
     .footer-row {
-        flex-direction: column;
+        flex-direction: column; /* Cambiar la dirección de los elementos a columna */
         text-align: center;
     }
     .footer-links {
         width: 100%;
         margin-bottom: 20px;
     }
+    form {
+        width: 100%; /* Ajustar formulario a 100% en pantallas pequeñas */
+    }
+    .btn1 {
+        width: 100%; /* Ajustar botón a 100% en pantallas pequeñas */
+    }
 }
 
-.footer .follow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.footer .follow ul {
-    display: flex;
-    justify-content: space-between;
-    width: 20vw;
-}
-
-.footer .follow ul li {
-    font-size: 20px;
-}
-
-.footer .follow ul li a {
-    color: #ff0000;
-}
-
-.footer .follow ul li a:hover {
-    color: #000;
-    transform: scale(1.2);
-}
-
-.footer .follow ul li {
-    font-size: 30px;
-}
-
-.footer .follow ul li a {
-    color: #ff0000;
-}
-
-.footer .follow ul li a:hover {
-    color: #000;
-    transform: scale(1.2);
-}
