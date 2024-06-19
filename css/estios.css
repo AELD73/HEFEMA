@@ -8,6 +8,7 @@
 body{
     font-family: Arial;
     margin: 0;
+    background-image: url(webb.png);
 }
 .logo {
     padding: 10px;
