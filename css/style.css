@@ -196,12 +196,14 @@ header {
     display: flex;
     width: 100%;
     align-items: center; /* Centra verticalmente las imágenes */
+    
 }
 
 .slider-images img {
-    max-width: 10%;
-    height: 14vh; /* Ajusta la altura según necesites */
+    max-width: 100px;
+    height: 15vh; /* Ajusta la altura según necesites */
     margin: 10px;
+    object-fit: cover;
 }
 
 @keyframes slide {
@@ -234,7 +236,7 @@ header {
 }
 
 .overlay img {
-    max-width: 80%;
+    max-width: 90%;
     max-height: 90%;
     object-fit: cover;
 }
@@ -252,7 +254,7 @@ header {
     }
     .slider-images img {
         max-width: 20%;
-        height: 17vh;
+        height: 15vh;
     }
     .slider-images {
         animation: slide 75s linear infinite;
@@ -271,7 +273,7 @@ header {
     }
     .slider-images {
         animation: slide 205s linear infinite;
-        margin: 45px auto;
+        margin: 35px auto;
     }
     @keyframes slide {
         0% {
@@ -295,7 +297,7 @@ header {
     }
     .slider-images {
         animation: slide 95s linear infinite;
-        margin: 60px auto;
+        margin: 50px auto;
     }
     @keyframes slide {
         0% {
@@ -318,7 +320,7 @@ header {
     }
     .slider-images {
         animation: slide 105s linear infinite;
-        margin: 20px auto;  
+        margin: 15px auto;  
     }
 }
 
