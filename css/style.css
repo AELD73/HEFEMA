@@ -258,8 +258,8 @@ header {
 }
 
 .overlay img {
-    width: 50%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     object-fit: cover;
     border: 10px solid white; /* Agrega el marco blanco */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra al marco */
@@ -278,7 +278,7 @@ header {
         background-size: cover;
     }
     .slider-images img {
-        width: 20%;
+        width: 10%;
         height: 13vh;
     }
     .slider-images{
@@ -295,6 +295,14 @@ header {
             transform: translateX(-1250%);
         }
     }
+    .overlay img {
+        width: 95%;
+        height: 60%;
+        object-fit: cover;
+        border: 10px solid white; /* Agrega el marco blanco */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra al marco */
+        border-radius: 10px; /* Opcional: agrega bordes redondeados */
+    }
 
 }
 
@@ -304,7 +312,7 @@ header {
         background-size: cover;
     }
     .slider-images img {
-        width: 25%;
+        width: 15%;
         height: 15vh;
     }
     .slider-images{
@@ -320,6 +328,14 @@ header {
             transform: translateX(-1750%);
         }
     }
+    .overlay img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+        border: 10px solid white; /* Agrega el marco blanco */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra al marco */
+        border-radius: 10px; /* Opcional: agrega bordes redondeados */
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -328,7 +344,7 @@ header {
         background-size: cover;
     }
     .slider-images img {
-        width: 40%;
+        width: 30%;
         height: 19vh;
         object-fit: cover;
     }
@@ -346,6 +362,14 @@ header {
             transform: translateX(-2800%);
         }
     }
+    .overlay img {
+        width: 100%;
+        height: 40%;
+        object-fit: cover;
+        border: 10px solid white; /* Agrega el marco blanco */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra al marco */
+        border-radius: 10px; /* Opcional: agrega bordes redondeados */
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -354,7 +378,7 @@ header {
         background-size: cover;
     }
     .slider-images img {
-        width: 60%;
+        width: 40%;
         height: 20vh;
     }
     .slider-images{
@@ -369,6 +393,14 @@ header {
         100% {
             transform: translateX(-4500%);
         }
+    }
+    .overlay img {
+        width: 100%;
+        height: 40%;
+        object-fit: cover;
+        border: 10px solid white; /* Agrega el marco blanco */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra al marco */
+        border-radius: 10px; /* Opcional: agrega bordes redondeados */
     }
 }
 
