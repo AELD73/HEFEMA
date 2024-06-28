@@ -133,8 +133,8 @@ header {
 }
 @media (max-width: 1024px){
     .gift-container{
-        margin-top: 5px;
-        height: 30vh;
+        margin-top: 90px;
+        height: 60vh;
     }
     .gift{
         width: 100%;
@@ -199,7 +199,7 @@ header {
     overflow: hidden;
     position: relative;
     background-image: url('riel 2.png');
-    background-size:120% ;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 25vh; /* Puedes ajustar esta altura según necesites */
@@ -211,12 +211,13 @@ header {
 .slider-images {
     display: flex;
     animation: slide 90s linear infinite;
-    margin: 45px auto;
+    margin-top: 25px;
+    align-items: center;
 }
 
 .slider-images img {
-    width: 100px;
-    height: 14vh; /* Ajusta la altura según necesites */
+    width: 5vw;
+    height: 13vh; /* Ajusta la altura según necesites */
     margin: 10px;
     object-fit: cover;
     object-position: center;
@@ -271,7 +272,7 @@ header {
 @media screen and (max-width: 1024px) {
     .slider-container {
         height: 25vh;
-        background-size: 210%;
+        background-size: cover;
         margin-bottom: 5px;
     }
     .slider-images img {
@@ -279,7 +280,7 @@ header {
         height: 13vh;
     }
     .slider-images{
-        margin: 40px;
+        margin-top: 30px;
         animation: slide 120s linear infinite;
     }
     
@@ -657,3 +658,4 @@ form {
         width: 100%; /* Ajustar botón a 100% en pantallas pequeñas */
     }
 }
+
