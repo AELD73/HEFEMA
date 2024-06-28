@@ -120,20 +120,32 @@ header {
 }
 
 .gift-container {
-    margin-top: 90px;
-    margin-bottom: 5px;
+    margin-top: 85px;
     height: 60vh;
     width: 100vw;
     overflow: hidden; /* Para ocultar cualquier desbordamiento */
-    text-align: center;
+
 }
 .gift {
-    
-    width: 60%;
+    width: 100%;
     height: 100%;
     object-fit: contain;
 }
+@media (max-width: 1024px){
+    .gift-container{
+        margin-top: 5px;
+        height: 30vh;
+    }
+    .gift{
+        width: 100%;
+        height: 100%;
+    }
+    .slider-container{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
+}
 @media (max-width: 768px) {
     .gift-container {
         margin-top: 50px; /* Reduce el margen superior para acercar el gift al slider en móviles */
@@ -149,30 +161,16 @@ header {
     }
   
 }
-@media (max-width: 1024px) {
-    .gift-container {
-        margin-top: 90px; /* Reduce el margen superior para acercar el gift al slider en móviles */
-        height: 40vh; /* Ajusta la altura para móviles */
-    }
-    .slider-container {
-    margin-top: 0;
-    margin-bottom: 0;
-    }
-    .gift{
-        width: 100%;
-        height: 100%;
-    }
-  
-}
+
 @media (max-width: 480px) {
     .gift-container {
-        margin-top: 50px; /* Reduce aún más el margen superior en pantallas más pequeñas */
-        height: 35vh; /* Ajusta la altura para pantallas más pequeñas */
+        margin-top: 75px; /* Reduce aún más el margen superior en pantallas más pequeñas */
+        height: 30vh; /* Ajusta la altura para pantallas más pequeñas */
     
     }
     .slider-container {
-        margin-top: 20px; /* Asegura que no haya margen superior en pantallas más pequeñas */
-        margin-bottom: 20px; /* Asegura que no haya margen inferior en pantallas más pequeñas */
+        margin-top: 0px; /* Asegura que no haya margen superior en pantallas más pequeñas */
+        margin-bottom: 0px; /* Asegura que no haya margen inferior en pantallas más pequeñas */
         
     }
     .gift{
@@ -182,9 +180,8 @@ header {
 }
 @media (max-width: 320px) {
     .gift-container {
-        margin-top: 5px; /* Reduce aún más el margen superior en pantallas más pequeñas */
-        height: 40vh; /* Ajusta la altura para pantallas más pequeñas */
-        width: 100%;
+        margin-top: 85px; /* Reduce aún más el margen superior en pantallas más pequeñas */
+        height: 25vh; /* Ajusta la altura para pantallas más pequeñas */
     }
     .slider-container {
         margin-top: 0px; /* Asegura que no haya margen superior en pantallas más pequeñas */
@@ -193,7 +190,7 @@ header {
     .gift{
         width: 100%;
         height: 100%;
-        
+        object-fit: unset;
     }
 }
 /*CSS slider*/
@@ -202,12 +199,11 @@ header {
     overflow: hidden;
     position: relative;
     background-image: url('riel 2.png');
-    background-size: cover;
+    background-size:120% ;
     background-repeat: no-repeat;
     background-position: center;
     height: 25vh; /* Puedes ajustar esta altura según necesites */
     width: 100vw;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 }
@@ -215,22 +211,23 @@ header {
 .slider-images {
     display: flex;
     animation: slide 90s linear infinite;
-    margin: 35px auto;
+    margin: 45px auto;
 }
 
 .slider-images img {
     width: 100px;
-    height: 15vh; /* Ajusta la altura según necesites */
+    height: 14vh; /* Ajusta la altura según necesites */
     margin: 10px;
     object-fit: cover;
-    border: 5px solid #ccc;
+    object-position: center;
+    border: 5px solid #c1bfbf;
     transition: transform 0.2s, border-color 0.2s;
     cursor: pointer;
 }
 
 .slider-images img:hover {
     transform: scale(1.05);
-    border-color: #999;
+    border-color: #c1bfbf;
 }
 
 @keyframes slide {
@@ -262,7 +259,7 @@ header {
     height: 90%;
     object-fit: inherit;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra al marco */
-    border: 3px solid #fff;
+    border: 3px solid #c1bfbf;
 }
 
 .overlay-text {
@@ -274,7 +271,8 @@ header {
 @media screen and (max-width: 1024px) {
     .slider-container {
         height: 25vh;
-        background-size: cover;
+        background-size: 210%;
+        margin-bottom: 5px;
     }
     .slider-images img {
         width: 10%;
@@ -297,8 +295,8 @@ header {
     .overlay img {
         width: 70%;
         height: 75%;
-        object-fit: inherit;
-        border: 10px solid white; /* Agrega el marco blanco */
+        object-fit: cover;
+        border: 10px solid #c1bfbf; /* Agrega el marco blanco */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra al marco */
         border-radius: 10px; /* Opcional: agrega bordes redondeados */
     }
@@ -308,7 +306,8 @@ header {
 @media screen and (max-width: 768px) {
     .slider-container {
         height: 30vh;
-        background-size: cover;
+        background-size: 340%;
+        margin-bottom: 5px;
     }
     .slider-images img {
         width: 15%;
@@ -331,7 +330,7 @@ header {
         width: 80%;
         height: 80%;
         object-fit: inherit;
-        border: 10px solid white; /* Agrega el marco blanco */
+        border: 10px solid #c1bfbf; /* Agrega el marco blanco */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra al marco */
         border-radius: 10px; /* Opcional: agrega bordes redondeados */
     }
@@ -340,17 +339,17 @@ header {
 @media screen and (max-width: 480px) {
     .slider-container {
         height: 35vh;
-        background-size: cover;
+        background-size: 630%;
     }
     .slider-images img {
         width: 30%;
-        height: 19vh;
+        height: 20vh;
         object-fit: cover;
     }
 
     .slider-images{
         animation: slide 140s linear infinite;
-
+        margin-top: 60px;
     }
 
     @keyframes slide {
@@ -365,7 +364,7 @@ header {
         width: 100%;
         height: 50%;
         object-fit: inherit;
-        border: 10px solid white; /* Agrega el marco blanco */
+        border: 10px solid #c1bfbf; /* Agrega el marco blanco */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra al marco */
         border-radius: 10px; /* Opcional: agrega bordes redondeados */
     }
@@ -397,7 +396,7 @@ header {
         width: 100%;
         height: 40%;
         object-fit: cover;
-        border: 10px solid white; /* Agrega el marco blanco */
+        border: 10px solid #c1bfbf; /* Agrega el marco blanco */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra al marco */
         border-radius: 10px; /* Opcional: agrega bordes redondeados */
     }
@@ -658,4 +657,3 @@ form {
         width: 100%; /* Ajustar botón a 100% en pantallas pequeñas */
     }
 }
-
