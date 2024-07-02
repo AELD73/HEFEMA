@@ -40,5 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
       updateSliderPosition();
   });
 
+   images.forEach(img => {
+    img.setAttribute('loading', 'lazy');
+});
   updateSliderPosition();
 });
