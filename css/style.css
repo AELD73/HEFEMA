@@ -437,23 +437,7 @@ header {
     }
     
 }
-@media (max-height: 741px){
-    .slider-images{
-        margin-top: 20px;
-    }   
-    .slider-images img{
-        width: 100%;
-        height: 15vh;
-    }
-    .conteiner-cartas{
-        height: 300px;
-    }
-    .conteiner-cartas img{
-        width: 100%;
-        height: 300px;
-        object-fit: inherit;
-    }
-}
+
 /*CSS consultoria y fabricacion*/
 .scroll-container {
     display: flex;
