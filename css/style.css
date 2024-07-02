@@ -517,17 +517,7 @@ header {
     }
 }
 
-@media (max-height: 866px){
-    .scroll-container{
-        height: 400px;
-    }
-    .text-slide-left, .text-slide-right {
-        width: 90%; /* Ajusta el ancho de las cajas en móviles */
-        margin:  0; /* Espacio entre las cajas */
-        font-size: 15px;
-        height: 50vh;
-    }
-}
+
 
 .mapa {
     width: 100%;
