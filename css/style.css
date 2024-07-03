@@ -326,9 +326,10 @@ header {
     .slider-images img {
         width: 30%;
         height: 15vh;
+        object-fit: cover;
     }
     .slider-images{
-        margin-top: 65px;
+        margin-top: 60px;
         animation: slide 130s linear infinite;
     }
 
@@ -357,13 +358,13 @@ header {
     }
     .slider-images img {
         width: 50%;
-        height: 15vh;
+        height: 20vh;
         object-fit: cover;
     }
 
     .slider-images{
         animation: slide 140s linear infinite;
-        margin-top: 89px;
+        margin-top: 60px;
     }
 
     @keyframes slide {
@@ -390,11 +391,12 @@ header {
         background-size: cover;
     }
     .slider-images img {
-        width: 100%;
+        width: 70%;
         height: 20vh;
+        object-fit: cover;
     }
     .slider-images{
-        margin-top: 85px;
+        margin-top: 80px;
         animation: slide 180s linear infinite;
     }
 
@@ -415,6 +417,8 @@ header {
         border-radius: 10px; /* Opcional: agrega bordes redondeados */
     }
 }
+
+
 
 
 
