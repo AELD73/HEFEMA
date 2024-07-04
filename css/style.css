@@ -662,7 +662,20 @@ form {
     background-color: rgba(254, 0, 0, 0.671);
     transition: 0.3s;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1310px) {
+
+    .form-content label {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        font-size: 17px;
+        color: #000;
+        pointer-events: none;
+        transition: 0.3s;
+    }
+}
+@media only screen and (max-width: 1024px) {
     .footer {
         padding: 40px 10px; /* Ajustado padding para pantallas pequeñas */
     }
@@ -681,3 +694,4 @@ form {
         width: 100%; /* Ajustar botón a 100% en pantallas pequeñas */
     }
 }
+
