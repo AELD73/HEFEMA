@@ -279,9 +279,13 @@ header {
     }
   
     .slider-images{
-        margin-top: 25px;
+        margin-top: 40px;
+    }
+    .slider-images img{
+        height: 11vh;
     }
 }
+
 @media screen and (max-width: 1024px) {
     .slider-container {
         height: 25vh;
