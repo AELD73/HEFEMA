@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }).addTo(map);
 
     L.marker([19.670915622237473, -99.01647539815298]).addTo(map)
-        .bindPopup('Herrajes Ferroviarios y Materiales, S.A. de C.V.')
+        .bindPopup('ACEROS Y MAQUINADOS FERROVIARIOS, S.A. de C.V.')
         .openPopup();
 });

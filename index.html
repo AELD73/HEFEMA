@@ -1,239 +1,524 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEFEMA</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACEMAFE</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link rel="stylesheet" href="css/style.css">
-    
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header>
-     <div class="logo">
-        <a href="#inicio"><img src="imagenes/Logo Principal.png" alt=""></a>
-        <p>HEFEMA</p>
-    </div>
-     <div class="bars">
+      <div class="logo">
+        <a href="#inicio"><img src="imagenes/Logo Principal.png" alt="" /></a>
+        <p>ACEMAFE</p>
+      </div>
+      <div class="bars">
         <div class="line"></div>
-        <div class="line"></div>                        
+        <div class="line"></div>
         <div class="line"></div>
       </div>
 
-
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="#inicio">INICIO</a></li>
-                <li><a href="galeria.html">GALERIA</a></li> 
-                <li><a href="#sobreNosotros">SOBRE NOSTROS</a></li>
-                <li><a href="#Contacto">CONTACTO</a></li>
-            </ul>
-        </nav>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="galeria.html">GALERIA</a></li>
+          <li><a href="#sobreNosotros">SOBRE NOSTROS</a></li>
+          <li><a href="#Contacto">CONTACTO</a></li>
+        </ul>
+      </nav>
     </header>
-    <script src="barra.js"></script>
-    
-  <div class="gift-container">
-        <img id="inicio" alt="GIFT" src="imagenes/HERRAJES FERROVIARIOS - BIENVENIDA2.gif" class="gift"  loading="lazy" >
+    <script src="js/barra.js"></script>
+
+    <div class="gift-container">
+      <video id="inicio" alt="GIFT" class="gift" autoplay muted loop>
+        <source
+          src="imagenes/ACEROS Y MAQUINADOS FERROVIARIOS.mp4"
+          type="video/mp4"
+        />
+        Tu navegador no soporta la etiqueta de video.
+      </video>
     </div>
-   
-    
 
-        <!--Slider-->
-      
-          <div class="slider-container">
-            <div class="slider-images">
-               <img src="imagenes/galeria1.webp" alt="SAPO AUTOREULADOR No.8 de 115 LB/YD" data-text="">
-                <img src="imagenes/galeria2.webp" alt="SAPO TIPO INDUSTRIAL No.8 DE 115 LB/YD" data-text="">
-                <img src="imagenes/galeria3.webp" alt="SAPO CON ISERTO AM No.8 DE 115 LB/YD" data-text="">
-                <img src="imagenes/galeria4.webp" alt="AGUJAS DE 16'6'' x 115 LB CON INSERTO AM" data-text="">
-                <img src="imagenes/galeria5.webp" alt="OREJAS PARA AGUJA" data-text="">
-                <img src="imagenes/galeria6.webp" alt="PUNTA DE AGUJA TIPO SAMSON CON RIEL DE APOYO" data-text="">
-                <img src="imagenes/galeria7.webp" alt="CONTRARIELES DE 13' x 115 LB SIN EMPAQUES NI TORNILLOS" data-text="">
-                <img src="imagenes/galeria9.webp" alt="CONTRARIELES DE 13' x 115 LB COMPLETOS ARMADOS" data-text="">
-                <img src="imagenes/galeria10.webp" alt="CONTRARIELES DE 13' x 115 LB ARAMADO" data-text="">
-                <img src="imagenes/galeria11.webp" alt="GUARDAS AGUJAS EN PROCESO" data-text="">
-                <img src="imagenes/galeria12.webp" alt="GUARDA AGUJAS DE 1.00 M ARMADOS" data-text="">
-                <img src="imagenes/galeria13.webp" alt="PROTECTOR DE AGUJAS TIPO CONTRARIEL" data-text="">
-                <img src="imagenes/galeria14.webp" alt="PROTECTOR DE AGUJAS TIPO CONTRARIEL" data-text="">
-                <img src="imagenes/galeria15.webp" alt="PROTECTOR DE PUNTA DE AGUJAS TIPO PASTILLA" data-text="">
-                <img src="imagenes/galeria16.webp" alt="BLOCK TALON DE AGUJA DE 115 LB" data-text="">
-                <img src="imagenes/galeria17.webp" alt="PERNO DE HOMBRO PARA BLOCK TALÓN DE AGUJA" data-text="">
-                <img src="imagenes/galeria18.webp" alt="ARBOL DE CAMBIO BAJO 22E" data-text="">
-                <img src="imagenes/galeria19.webp" alt="BANDERAS PARA ÁRBOL DE CAMBIO ALTO" data-text="">
-                <img src="imagenes/galeria20.webp" alt="CUERPO DE ARBOL DE CAMBIO 56-B SEMIAUTOMATICO" data-text="">
-                <img src="imagenes/galeria21.webp" alt="CUERPO DEL ÁRBOL DE CAMBIO ESQUELÉTICO 112-D" data-text="">
-                <img src="imagenes/galeria22.webp" alt="ÁRBOL DE CAMBIO TIPO P PARA PAVIMENTO" data-text="">
-                <img src="imagenes/galeria23.webp" alt="HORQUILLA Y PERNO DE OJO PARA ÁRBOL DE CAMBIO" data-text="">
-                <img src="imagenes/galeria24.webp" alt="PLACAS CORREDERAS Y GEMELAS PARA HERRAJES DE CAMBIO" data-text="">
-                <img src="imagenes/galeria25.webp" alt="PLACAS PARA CONTRARIEL" data-text="">
-                <img src="imagenes/galeria26.webp" alt="PLACA ESCANTILLÓN 1-G" data-text="">
-                <img src="imagenes/galeria27.webp" alt="VARILLAS DE CONEXIÓN NO.1 Y 2 DE 1/4''" data-text="">
-                <img src="imagenes/galeria28.webp" alt="SILLETAS RÍGIDAS DE 115 LB" data-text="">
-                <img src="imagenes/galeria29.webp" alt="DESCARRILADOR REVERSIBLE TIPO MAROMA" data-text="">
-                <img src="imagenes/galeria30.webp" alt="PLACA U PARA AGUJA DESCARRILADORA" data-text="">
-                <img src="imagenes/galeria31.webp" alt="TOPE DE FIN DE VÍA BUMPING POST" data-text="">
-                <img src="imagenes/galeria32.webp" alt="TOPE DE FÍN DE VÍA DE MEDIA RUEDA" data-text="">
-                <img src="imagenes/galeria33.webp" alt="TOPE PARA CARRO CLAMPING CHOCK" data-text="">
-                <img src="imagenes/galeria34.webp" alt="PLANCHUELA DE CORDÓN DE 36'' x 115 LB RE" data-text="">
-                <img src="imagenes/galeria35.webp" alt="PLANCHUELA DE COMPROMISO DE 115 A 85 LB" data-text="">
-                <img src="imagenes/galeria36.webp" alt="PLANCHUELAS AISLADAS PARA RIEL DE 115 LB" data-text="">
-                <img src="imagenes/galeria37.webp" alt="KIT DE INSTALACIÓN PARA PLANCHUELAS AISLADAS" data-text="">
-                <img src="imagenes/galeria38.webp" alt="PLANCHUELAS DE JOROBA PARA RIEL DE 115 LB" data-text="">
-                <img src="imagenes/galeria39.webp" alt="ABRAZADERA TEMPORAL PARA MANTENIMIENTO 115" data-text="">
-                <img src="imagenes/galeria40.webp" alt="TORNILLOS DE VIA" data-text="">
-                <img src="imagenes/galeria41.webp" alt="TIRAFONDO JAB 173mm" data-text="">
-                <img src="imagenes/galeria42.webp" alt="PLANCHUELAS ESPECIALES PARA DIFERENTES MEDIDAS DE RIEL" data-text="">
-                <img src="imagenes/galeria43.webp" alt="VARILLAS TENSORAS DE ESCANTILLON TIPO J DE 1 1/4" data-text="">
-                <img src="imagenes/galeria44.webp" alt="CRUCERO DE VIA DE RIEL ARMADO DE 62° PARA RIEL DE 115 LB" data-text="">
-                <img src="imagenes/galeria45.webp" alt="CRUCERO DE 25° CON INSERTOS DE ACERO MANGANESO" data-text="">
-                <img src="imagenes/galeria46.webp" alt="RIELES FERROVIARIOS DE 115 LB/yD SECCION RE" data-text="">
-                <img src="imagenes/galeria47.webp" alt="CLAVO DE VIA DE 5/8 x 6" data-text="">
-                <img src="imagenes/galeria48.webp" alt="PERNO SL GALVANIZADO PARA FIJACIONES EN DURMIENTE DE CONCRETO" data-text="">
-                <img src="imagenes/galeria49.webp" alt="GRAPA NO.7 PARA FIJACIONES RNY" data-text="">
-                <img src="imagenes/galeria50.webp" alt="CLIP ELÁSTICO 'e' PARA FIJACION TIPO PANDROL" data-text="">
-                <img src="imagenes/galeria51.webp" alt="PLACA ROLADA PARA DURMIENTE DE MADERA CON FIJACIÓN ELÁSTICA TIPO PANDROL" data-text="">
-                <img src="imagenes/galeria52.webp" alt="CLIP NO.62 ATORNILLABLE PARA RIEL DE 115 LB" data-text="">
-                <img src="imagenes/galeria53.webp" alt="TOPE DE PLÁSTICO (TACÓN) PARA FIJACIÓN ES" data-text="">
-                <img src="imagenes/galeria54.webp" alt="TOPE PLÁSTICO (TACÓN) PARA FIJACIÓN GN" data-text="">
-                <img src="imagenes/galeria55.webp" alt="TAQUETE PARA CONCRETO TIPO ARPON DE 3/4x7" data-text="">
-                <img src="imagenes/galeria56.webp" alt="ANCLA TIPO WOODING PARA EL RIEL DE 115 LB" data-text="">
-                <img src="imagenes/galeria57.webp" alt="ANCLA TIPO 'J' PARA RIEL DE 115 LB" data-text="">
-                <img src="imagenes/galeria58.webp" alt="PLACA DE ASIENTO DE 14'' PARA EL RIEL DE 115 LB" data-text="">
-                <img src="imagenes/galeria59.webp" alt="ARMÓN DE VÍA" data-text="">
-                <img src="imagenes/galeria60.webp" alt="DURMIENTE DE CONCRETO I-84" data-text="">
-                <img src="imagenes/galeria61.webp" alt="BIELDO DE 10 DIENTES PARA BALASTO" data-text="">
-                <img src="imagenes/galeria62.webp" alt="IZADORA DE RIEL (PERROS) DE CADENA" data-text="">
-                <img src="imagenes/galeria63.webp" alt="ESCANTILLÓN DE VÍA" data-text="">
-                <img src="imagenes/galeria64.webp" alt="TROLLEY PARA ARRASTRE DE RIELES" data-text="">
-                <img src="imagenes/galeria65.webp" alt="CRUCERO A NIVEL DEL RIEL ARMADO 10°" data-text="">
-                <img src="imagenes/galeria66.webp" alt="SEÑALIZACIÓN DE FIN DE VÍA" data-text="">
-                <img src="imagenes/galeria67.webp" alt="CLAVO DE VÍA DE 5/8 x 6 " data-text="">
-                <img src="imagenes/galeria68.webp" alt="PLANCHUELA DE COMPROMISO DE 100 A 115 LB/YD" data-text="">
-                <img src="imagenes/galeria69.webp" alt="GRAPA RN Y REFUERZO PARA DURMIENTE I-84" data-text="">
-                <img src="imagenes/galeria70.webp" alt="BARRAS DE CONEXIÓN ÁRBOL ALTO Y BAJO" data-text="">
-                <img src="imagenes/galeria71.webp" alt="TALADRO HIDRÁULICO PARA RIEL" data-text="">
+    <!--Slider-->
 
+    <div class="slider-container">
+      <div class="slider-images">
+        <img
+          src="imagenes/galeria1.webp"
+          alt="SAPO AUTORESGUARDADO No.8 de 115 LB/YD"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria2.webp"
+          alt="SAPO TIPO INDUSTRIAL No.8 DE 115 LB/YD"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria3.webp"
+          alt="SAPO CON ISERTO AM No.8 DE 115 LB/YD"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria4.webp"
+          alt="AGUJAS DE 16'6'' x 115 LB CON INSERTO AM"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria5.webp"
+          alt="OREJAS PARA AGUJA"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria6.webp"
+          alt="PUNTA DE AGUJA TIPO SAMSON CON RIEL DE APOYO"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria7.webp"
+          alt="CONTRARIELES DE 13' x 115 LB SIN EMPAQUES NI TORNILLOS"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria9.webp"
+          alt="CONTRARIELES DE 13' x 115 LB COMPLETOS ARMADOS"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria10.webp"
+          alt="CONTRARIELES DE 13' x 115 LB ARAMADO"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria11.webp"
+          alt="GUARDAS AGUJAS EN PROCESO"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria12.webp"
+          alt="GUARDA AGUJAS DE 1.00 M ARMADOS"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria13.webp"
+          alt="PROTECTOR DE AGUJAS TIPO CONTRARIEL"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria14.webp"
+          alt="PROTECTOR DE AGUJAS TIPO CONTRARIEL"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria15.webp"
+          alt="PROTECTOR DE PUNTA DE AGUJAS TIPO PASTILLA"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria16.webp"
+          alt="BLOCK TALON DE AGUJA DE 115 LB"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria17.webp"
+          alt="PERNO DE HOMBRO PARA BLOCK TALÓN DE AGUJA"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria18.webp"
+          alt="ARBOL DE CAMBIO BAJO 22E"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria19.webp"
+          alt="BANDERAS PARA ÁRBOL DE CAMBIO ALTO"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria20.webp"
+          alt="CUERPO DE ARBOL DE CAMBIO 56-B SEMIAUTOMATICO"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria21.webp"
+          alt="CUERPO DEL ÁRBOL DE CAMBIO ESQUELÉTICO 112-D"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria22.webp"
+          alt="ÁRBOL DE CAMBIO TIPO P PARA PAVIMENTO"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria23.webp"
+          alt="HORQUILLA Y PERNO DE OJO PARA ÁRBOL DE CAMBIO"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria24.webp"
+          alt="PLACAS CORREDERAS Y GEMELAS PARA HERRAJES DE CAMBIO"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria25.webp"
+          alt="PLACAS PARA CONTRARIEL"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria26.webp"
+          alt="PLACA ESCANTILLÓN 1-G"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria27.webp"
+          alt="VARILLAS DE CONEXIÓN NO.1 Y 2 DE 1/4''"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria28.webp"
+          alt="SILLETAS RÍGIDAS DE 115 LB"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria29.webp"
+          alt="DESCARRILADOR REVERSIBLE TIPO MAROMA"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria30.webp"
+          alt="PLACA U PARA AGUJA DESCARRILADORA"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria31.webp"
+          alt="TOPE DE FIN DE VÍA BUMPING POST"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria32.webp"
+          alt="TOPE DE FÍN DE VÍA DE MEDIA RUEDA"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria33.webp"
+          alt="TOPE PARA CARRO CLAMPING CHOCK"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria34.webp"
+          alt="PLANCHUELA DE CORDÓN DE 36'' x 115 LB RE"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria35.webp"
+          alt="PLANCHUELA DE COMPROMISO DE 115 A 85 LB"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria36.webp"
+          alt="PLANCHUELAS AISLADAS PARA RIEL DE 115 LB"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria37.webp"
+          alt="KIT DE INSTALACIÓN PARA PLANCHUELAS AISLADAS"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria38.webp"
+          alt="PLANCHUELAS DE JOROBA PARA RIEL DE 115 LB"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria39.webp"
+          alt="ABRAZADERA TEMPORAL PARA MANTENIMIENTO 115"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria40.webp"
+          alt="TORNILLOS DE VIA"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria41.webp"
+          alt="TIRAFONDO JAB 173mm"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria42.webp"
+          alt="PLANCHUELAS ESPECIALES PARA DIFERENTES MEDIDAS DE RIEL"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria43.webp"
+          alt="VARILLAS TENSORAS DE ESCANTILLON TIPO J DE 1 1/4"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria44.webp"
+          alt="CRUCERO DE VIA DE RIEL ARMADO DE 62° PARA RIEL DE 115 LB"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria45.webp"
+          alt="CRUCERO DE 25° CON INSERTOS DE ACERO MANGANESO"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria46.webp"
+          alt="RIELES FERROVIARIOS DE 115 LB/yD SECCION RE"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria47.webp"
+          alt="CLAVO DE VIA DE 5/8 x 6"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria48.webp"
+          alt="PERNO SL GALVANIZADO PARA FIJACIONES EN DURMIENTE DE CONCRETO"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria49.webp"
+          alt="GRAPA NO.7 PARA FIJACIONES RNY"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria50.webp"
+          alt="CLIP ELÁSTICO 'e' PARA FIJACION TIPO PANDROL"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria51.webp"
+          alt="PLACA ROLADA PARA DURMIENTE DE MADERA CON FIJACIÓN ELÁSTICA TIPO PANDROL"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria52.webp"
+          alt="CLIP NO.62 ATORNILLABLE PARA RIEL DE 115 LB"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria53.webp"
+          alt="TOPE DE PLÁSTICO (TACÓN) PARA FIJACIÓN ES"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria54.webp"
+          alt="TOPE PLÁSTICO (TACÓN) PARA FIJACIÓN GN"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria55.webp"
+          alt="TAQUETE PARA CONCRETO TIPO ARPON DE 3/4x7"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria56.webp"
+          alt="ANCLA TIPO WOODING PARA EL RIEL DE 115 LB"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria57.webp"
+          alt="ANCLA TIPO 'J' PARA RIEL DE 115 LB"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria58.webp"
+          alt="PLACA DE ASIENTO DE 14'' PARA EL RIEL DE 115 LB"
+          data-text=""
+        />
+        <img src="imagenes/galeria59.webp" alt="ARMÓN DE VÍA" data-text="" />
+        <img
+          src="imagenes/galeria60.webp"
+          alt="DURMIENTE DE CONCRETO I-84"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria61.webp"
+          alt="BIELDO DE 10 DIENTES PARA BALASTO"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria62.webp"
+          alt="IZADORA DE RIEL (PERROS) DE CADENA"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria63.webp"
+          alt="ESCANTILLÓN DE VÍA"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria64.webp"
+          alt="TROLLEY PARA ARRASTRE DE RIELES"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria65.webp"
+          alt="CRUCERO A NIVEL DEL RIEL ARMADO 10°"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria66.webp"
+          alt="SEÑALIZACIÓN DE FIN DE VÍA"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria67.webp"
+          alt="CLAVO DE VÍA DE 5/8 x 6 "
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria68.webp"
+          alt="PLANCHUELA DE COMPROMISO DE 100 A 115 LB/YD"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria69.webp"
+          alt="GRAPA RN Y REFUERZO PARA DURMIENTE I-84"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria70.webp"
+          alt="BARRAS DE CONEXIÓN ÁRBOL ALTO Y BAJO"
+          data-text=""
+        />
+        <img
+          src="imagenes/galeria71.webp"
+          alt="TALADRO HIDRÁULICO PARA RIEL"
+          data-text=""
+        />
+      </div>
+    </div>
+    <div class="overlay" id="overlay">
+      <img id="overlayImage" src="" alt="Imagen ampliada" />
+      <p class="overlay-text" id="overlayText"></p>
+    </div>
 
-            </div>
-        </div>
-        <div class="overlay" id="overlay">
-            <img id="overlayImage" src="" alt="Imagen ampliada">
-            <p class="overlay-text" id="overlayText"></p>
-        </div>
-        
+    <script src="js/texto.js"></script>
+    <!--Fin slider-->
 
-   <script src="js/texto.js"> </script>
-<!--Fin slider-->
+    <div class="anuncio_dudas">
+        <p>SI NO VE EL MATERIAL QUE NECESITA, NO DUDE EN CONTACTARNOS</p>
+    </div>
+    <!--Inicio Cartas-->
+    <div id="sobreNosotros" class="conteiner-cartas">
+      <img src="imagenes/HERRAJES - SOBRE NOSOTROS 3.jpg" alt="" />
+      <div class="sobreNosotros-img"></div>
+    </div>
 
-<!--Inicio Cartas-->
-<div id="sobreNosotros" class="conteiner-cartas">
-    <img src="imagenes/HERRAJES - SOBRE NOSOTROS 3.jpg" alt="">
-    <div class="sobreNosotros-img"></div>
-</div>
+    <!--Consultoria-->
 
-<!--Consultoria-->
-
-
-
-<div class="scroll-container">
-    <div class="text-slide-right">
+    <div class="scroll-container">
+      <div class="text-slide-right">
         <h1>Fabricación</h1>
-        Somos fabricantes de piezas para herrajes de cambio como sapos de riel armado, agujas, contrarrieles, topes de vía, placas, varillas tensoras, entre otros.
-        Contamos con la infraestructura para elaborar diversos materiales de la industria ferroviaria con un esmerado servicio para darle la mejor calidad y  precio del mercado y de acuerdo con las actuales especificaciones.
-    </div>
-    
-    <div class="text-slide-left">
+        Somos fabricantes de piezas para herrajes de cambio como sapos de riel
+        armado, agujas, contrarrieles, topes de vía, placas, varillas tensoras,
+        entre otros. Contamos con la infraestructura para elaborar diversos
+        materiales de la industria ferroviaria con un esmerado servicio para
+        darle la mejor calidad y precio del mercado y de acuerdo con las
+        actuales especificaciones.
+      </div>
+
+      <div class="text-slide-left">
         <h1>Consultoria</h1>
-        Como complemento a los servicios que ofrecemos está la asesoría y supervisión de sus proyectos de acuerdo con la normatividad aplicable para cada caso y buscando el mejor beneficio para nuestros clientes en relación a la seguridad, operatividad y economía.
+        Como complemento a los servicios que ofrecemos está la asesoría y
+        supervisión de sus proyectos de acuerdo con la normatividad aplicable
+        para cada caso y buscando el mejor beneficio para nuestros clientes en
+        relación a la seguridad, operatividad y economía.
+      </div>
     </div>
-    
-</div>
 
+    <script src="js/scroll.js"></script>
 
-<script src="js/scroll.js"></script>
+    <div class="mapa">
+      <h1>MAPA</h1>
+      <div id="map"></div>
+    </div>
 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/mapa.js"></script>
 
-
-<div class="mapa">
-    <h1>MAPA</h1>
-    <div id="map"></div>
-</div>
-
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="js/mapa.js"></script>
-
-
-
-<footer id="Contacto" class="footer">
-    <div class="conteiner">
+    <footer id="Contacto" class="footer">
+      <div class="conteiner">
         <div class="footer-row">
-            
-            <div class="footer-links">
-                <h4>CONTACTO</h4>
-                
-                <ul>
-                    <li>Dirección: CC TERRACERIA P17, LT 2 Z 1P1 1, COL. OJO DE AGUA, TECAMAC, EDO. DE MÉXICO. C.P. 55770</li>
-                    <li>Telefono: 55 6234 6183 y 55 6234 6283. </li>
-                    <li>Correo electronico: ventas@hefema.com.mx</li>
-                </ul>
+          <div class="footer-links">
+            <h4>CONTACTO</h4>
+
+            <ul>
+              <li>
+                Dirección: CC TERRACERIA P17, LT 2 Z 1P1 1, COL. OJO DE AGUA,
+                TECAMAC, EDO. DE MÉXICO. C.P. 55770
+              </li>
+              <li>Telefono: 55 6234 6183</li>
+              <li>Correo electronico: javier.rodriguez@acemafe.com.mx</li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>REDES SOCIALES</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/hefema99/"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://maps.app.goo.gl/ZDfqskfEcKromXYz7"
+                ><i class="fa-solid fa-map-location-dot"></i
+              ></a>
             </div>
+          </div>
 
-            <div class="footer-links">
-                <h4>REDES SOCIALES</h4>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/hefema99/"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://maps.app.goo.gl/ZDfqskfEcKromXYz7"><i class="fa-solid fa-map-location-dot"></i></a>
+          <div class="footer-links">
+            <h4>ENVIANOS UN MENSAJE</h4>
+            <div class="social-links">
+              <div class="form-content1">
+                <form
+                  action="https://formsubmit.co/javier.rodriguez@acemafe.com.mx"
+                  method="POST"
+                >
+                  <div class="form-content">
+                    <input type="text" name="Nombre" id="nombre" required />
+                    <label for="nombre">NOMBRE</label>
+                  </div>
 
-                </div>
+                  <div class="form-content">
+                    <input type="text" name="Correo" id="email" required />
+                    <label for="email">CORREO ELECTRONICO</label>
+                  </div>
+
+                  <div class="form-content">
+                    <input type="text" name="Telefono" id="telefono" required />
+                    <label for="telefono">TELEFONO</label>
+                  </div>
+
+                  <div class="form-content">
+                    <textarea
+                      name="Asunto"
+                      id="mensaje"
+                      cols="30"
+                      rows="5"
+                      required
+                    ></textarea>
+                    <label for="mensaje">MENSAJE</label>
+                  </div>
+                  <input class="btn1" type="submit" value="ENVIAR" />
+                </form>
+              </div>
+              <script src="js/formulario.js"></script>
             </div>
-
-            <div class="footer-links">
-                <h4>ENVIANOS UN MENSAJE</h4>
-                <div class="social-links">
-                    <div class="form-content1">
-                        <form action="https://formsubmit.co/ventas@hefema.com.mx" method="POST" >
-                            <div class="form-content">
-                                <input type="text" name="Nombre" id="nombre" required>
-                                <label for="nombre">NOMBRE</label>
-                            
-                            </div>
-                            
-                            <div class="form-content">
-                                <input type="text" name="Correo" id="email" required>
-                                <label for="email">CORREO ELECTRONICO</label>
-                                
-                            </div>
-                            
-                            <div class="form-content">
-                                <input type="text" name="Telefono" id="telefono" required>
-                                <label for="telefono">TELEFONO</label>
-                                
-                            </div>
-
-                            
-                            <div class="form-content">
-                                <textarea name="Asunto" id="mensaje" cols="30" rows="5" required></textarea>
-                                <label for="mensaje">MENSAJE</label>
-                                
-    
-                            </div>
-                            <input class="btn1" type="submit" value="ENVIAR"> 
-                        </form>
-                           
-                    </div>
-                    <script src="js/formulario.js"></script>
-                
-                            
-
-                </div>
-            </div>
-
+          </div>
         </div>
-    </div>
+      </div>
+    </footer>
 
-</footer>
-
-</body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+  </body>
 </html>

@@ -21,3 +21,4 @@ function toggleImagenes() {
     // Cambiar el estado de las imágenes mostradas
     imagenesMostradas = !imagenesMostradas;
 }
+
