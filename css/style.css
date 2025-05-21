@@ -9,6 +9,7 @@ body {
   font-family: Arial;
   overflow-x: hidden; /* Previene desbordamiento horizontal */
   background-image: url(webb.png);
+  font-family: Arial, Helvetica, sans-serif;
 }
 .logo {
   padding: 10px;
@@ -166,6 +167,24 @@ header {
 .anuncio_dudas {
   text-align: right;
   margin: 10px ;
+}
+
+
+
+.anuncio_funcionamiento {
+  opacity: 0;
+  visibility: hidden;
+  position: relative; /* o absolute, según tu diseño */
+  margin-bottom: 10px;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.anuncio_funcionamiento.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 
