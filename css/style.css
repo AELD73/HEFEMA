@@ -429,6 +429,42 @@ header {
   }
 }
 
+/*lista de productos*/
+.contenido h1{
+  margin-bottom: 10px;
+}
+.lista-productos {
+  display: flex;
+  align-items: flex; /* Alinea arriba en caso de diferentes alturas */
+  gap: 20px; /* Espacio entre la lista y la imagen */
+  padding: 20px;
+}
+
+.productos {
+  flex: 1; /* Ocupa el espacio disponible */
+  padding-left: 20px;
+}
+.productos li{
+  list-style-type: disc;
+  margin-bottom: 10px;
+}
+.imagen {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Alinea la imagen a la derecha */
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* Evita que se recorte la imagen */
+  display: block;
+}
+
 /*CSS consultoria y fabricacion*/
 .scroll-container {
   display: flex;
