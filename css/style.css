@@ -430,8 +430,11 @@ header {
 }
 
 /*lista de productos*/
+
+
 .contenido h1{
   margin-bottom: 10px;
+  display: block;
 }
 .lista-productos {
   display: flex;
@@ -443,19 +446,25 @@ header {
 .productos {
   flex: 1; /* Ocupa el espacio disponible */
   padding: 10px;
+  margin-right: 20px;
 }
-.productos li{
+.productos li {
   list-style-type: disc;
   margin: 10px;
-  padding-left: 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
 
-.productos li:hover{
-  padding-left: 10px;
+
+.productos li:hover {
+  /* Quitar el padding que genera desplazamiento real */
+  /* padding-inline-start: 10px; <-- Eliminar esta línea */
+
+  /* Aplicar desplazamiento visual */
+  transform: translateX(10px);
   color: black;
 }
+
 .imagen {
   flex: 1;
   display: flex;
