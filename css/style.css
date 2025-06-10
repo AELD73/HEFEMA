@@ -467,7 +467,7 @@ header {
 
 .imagen {
   flex: 1;
-  display: flex;
+  display: flexbox;
   justify-content: flex-end; /* Alinea la imagen a la derecha */
   align-items: center;
   padding: 0;
@@ -480,6 +480,25 @@ header {
   height: auto;
   object-fit: contain; /* Evita que se recorte la imagen */
   display: block;
+
+}
+
+.imagen2{
+  
+  flex: 2;
+  display: flexbox;
+  justify-content: flex-start; /* Alinea la imagen a la derecha */
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.imagen2 img{
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* Evita que se recorte la imagen */
+  
 
 }
 
