@@ -33,7 +33,6 @@
       </nav>
     </header>
     <script src="js/barra.js"></script>
-    
 
     <div class="gift-container">
       <video id="inicio" alt="GIFT" class="gift" autoplay muted loop>
@@ -458,7 +457,7 @@
         <img src="imagenes/tren-1.jpg" alt="Imagen de productos ferroviarios" />
       </div>
     </div>
-
+    
     <div class="lista-productos">
       <div class="imagen">
         <img src="imagenes/tren-1.jpg" alt="Imagen de productos ferroviarios" />
@@ -466,14 +465,25 @@
       <div class="contenido">
         <h1>MATERIALES COMERCIALIZADOS</h1>
         <ul class="productos">
-          <li>RIELES FERROVIARIOS Y PARA GRÚA EN DIFERENTES CALIBRES. NUEVO Y USADO</li>
-          <li>SAPOS TIPO INDUSTRIAL, AUTORESGUARDADOS Y CON INSERTO DE ACERO MANGANESO</li>
+          <li>
+            RIELES FERROVIARIOS Y PARA GRÚA EN DIFERENTES CALIBRES. NUEVO Y
+            USADO
+          </li>
+          <li>
+            SAPOS TIPO INDUSTRIAL, AUTORESGUARDADOS Y CON INSERTO DE ACERO
+            MANGANESO
+          </li>
           <li>ENDURECIDOS POR GOLPETEO O POR EXPLOSIVOS</li>
           <li>DURMIENTES DE CONCRETO I-84</li>
-          <li>DURMIENTES DE MADERA DE PINO Y ENCINO, ESTANDAR Y PARA CAMBIO DE VÍA</li>
+          <li>
+            DURMIENTES DE MADERA DE PINO Y ENCINO, ESTANDAR Y PARA CAMBIO DE VÍA
+          </li>
           <li>SOLDADURA ALUMINOTÉRMICA PARA RIELES</li>
           <li>AGUJAS TIPO SAMSON</li>
-          <li>JUEGOS DE FIJACIÓN RNY, GN Y ES CON TODOS SU COMPONENTES POR SEPARADO</li>
+          <li>
+            JUEGOS DE FIJACIÓN RNY, GN Y ES CON TODOS SU COMPONENTES POR
+            SEPARADO
+          </li>
           <li>CLIPS ESPECIALES PARA FIJACIÓN DE RIEL</li>
           <li>CLAVO DE VÍA</li>
           <li>TORNILLOS DE VÍA Y TORNILLOS ESPECIALES FERROVIARIOS</li>
@@ -488,6 +498,20 @@
         </ul>
       </div>
     </div>
+    <script>
+      window.addEventListener("load", ajustarAltura);
+      window.addEventListener("resize", ajustarAltura);
+
+      function ajustarAltura() {
+        const contenido = document.querySelector(".contenido");
+        const imagen = document.querySelector(".imagen");
+
+        if (contenido && imagen) {
+          const alturaLista = contenido.offsetHeight;
+          imagen.style.height = alturaLista + "px";
+        }
+      }
+    </script>
 
     <!--Consultoria-->
 
