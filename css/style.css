@@ -166,8 +166,10 @@ header {
 
 .anuncio_dudas {
   text-align: right;
-  margin: 10px;
+  margin: 10px ;
 }
+
+
 
 .anuncio_funcionamiento {
   opacity: 0;
@@ -184,6 +186,7 @@ header {
   opacity: 1;
   visibility: visible;
 }
+
 
 /*CSS slider*/
 
@@ -425,294 +428,56 @@ header {
     width: 100%;
   }
 }
-/*CSS para lista de productos*/
 
-/* ===== Tarjetas ===== */
-:root{
-  /* controla la altura de las tarjetas en desktop */
-  --card-h: 540px;
-  --img-aspect: 4 / 3; /* relación de aspecto del marco de imagen */
-}
-
-/* ===== Layout de ambos bloques ===== */
-.lista-productos{
-  display: grid;
-  grid-template-columns: minmax(0,1fr) 460px; /* texto | imagen */
-  gap: 24px;
+/*lista de productos*/
+.lista-productos {
+  display: flex;
   align-items: stretch;
-  margin: 32px 0;
-}
-.lista-productos.lista-productos--invert{
-  grid-template-columns: 460px minmax(0,1fr); /* imagen | texto */
-}
-
-/* Tarjetas iguales (misma altura) */
-.lista-productos .contenido,
-.lista-productos .imagen{
-  background:#fff;
-  border-radius:16px;
-  box-shadow:0 6px 24px rgba(0,0,0,.08);
-  padding:24px;
-  height: var(--card-h);
-  overflow: hidden; /* evita que el contenido “rompa” la altura */
-}
-
-/* ===== Columna de contenido ===== */
-.contenido{
-  display:flex;
-  flex-direction:column;
-}
-.contenido h1{
-  font-size:1.25rem;
-  margin:0 0 12px 0;
-}
-.productos{
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:grid;
-  gap:10px;
-}
-.productos li{
-  display:grid;
-  grid-template-columns: 1fr auto;
-  align-items:center;
-  gap:10px;
-  padding:12px 14px;
-  background:#f1f3f6;
-  border-radius:999px;
-}
-
-/* ===== Columna de imagen (sin distorsión) ===== */
-.imagen{
-  display:grid;
-  place-items:center;
-  padding:16px;            /* un poco menor para que el marco respire */
-}
-.imagen::before{
-  /* marco que fija la relación de aspecto */
-  content:"";
-  grid-area:1/1;
-  width:100%;
-  aspect-ratio: var(--img-aspect); /* 4:3 por defecto */
-  border-radius:12px;
-  background:#f7f7f9;
-}
-.imagen img{
-  grid-area:1/1;
-  width:100%;
-  height:100%;
-  object-fit: contain;      /* ⬅ evita distorsión */
-  object-position: center;
-  border-radius:12px;
-  display:block;
-}
-
-/* ===== Botón “Ver fotos” (opcional, estilizado) ===== */
-.btn-ver{
-  border:0;
-  padding:8px 12px;
-  border-radius:999px;
-  cursor:pointer;
-  font-size:.85rem;
-  background:#0f172a;
-  color:#fff;
-  box-shadow:0 2px 8px rgba(0,0,0,.1);
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 1024px){
-  :root{ --card-h: 460px; }
-  .lista-productos,
-  .lista-productos.lista-productos--invert{
-    grid-template-columns: 1fr; /* una sola columna */
-  }
-}
-@media (max-width: 640px){
-  :root{ --card-h: 380px; }
-  .imagen{ padding:12px; }
-}
-
-/* ===== Modal (ventana emergente) ===== */
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-.modal-backdrop.abierta {
-  display: flex;
-}
-.modal {
-  width: min(92vw, 1100px);
-  max-height: 92vh;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
-  padding: 14px;
-  display: grid;
-  gap: 12px;
-  grid-template-rows: auto 1fr auto;
-  z-index: 9999;
-}
-#header_galeria {
-  display: flex;
-  justify-content: flex-end; /* manda el botón a la derecha */
-  background: none; /* sin fondo */
-  border: none;
-  text-align: center;
-}
-.cerrar {
-  border: 0;
-  background: #0f172a;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 999px;
-  cursor: pointer;
-}
-.galeria {
-  position: relative;
-  display: grid;
-  place-items: center;
-  background: #f7f7f9;
-  border-radius: 12px;
+  gap: 20px;
+  margin: 10px auto;
+  /*height: 500px;  Altura fija */
   overflow: hidden;
 }
-.galeria img {
+
+.contenido {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.productos {
+  padding: 0;
+  margin: 0;
+}
+
+.productos li {
+  list-style-type: disc;
+  margin: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.productos li:hover {
+  transform: translateX(10px);
+  color: black;
+}
+
+.imagen {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.imagen img {
   width: 100%;
-  height: 70vh;
-  max-height: 70vh;
-  object-fit: contain;
-  object-position: center;
-  background: #fff;
-}
-.nav {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  pointer-events: none;
-}
-.nav button {
-  pointer-events: all;
-  border: 0;
-  background: #fff;
-  padding: 10px 14px;
-  border-radius: 999px;
-  cursor: pointer;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
-  margin: 8px;
-}
-.thumbs {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 8px;
-  overflow-x: auto;
-  padding: 6px 2px;
-}
-.thumbs img {
-  width: 90px;
-  height: 68px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
-  opacity: 0.75;
-  cursor: pointer;
-}
-.thumbs img.activa {
-  outline: 2px solid #0f172a;
-  opacity: 1;
-}
-
-/* Centrar el título dentro del header */
-#header_galeria {
-  display: flex;
-  justify-content: center;  /* centra horizontal */
-  align-items: center;      /* alinea vertical */
-  position: relative;       /* para poder posicionar el botón cerrar */
-  padding: 8px 40px 12px;   /* deja espacio lateral para que el botón no tape */
-}
-
-/* Botón cerrar flotando a la derecha */
-#header_galeria .cerrar {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* ——— 2) Botón cerrar flotante ——— */
-.modal {                 /* necesitamos posicionamiento para el botón */
-  position: relative;
-}
-.cerrar {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  z-index: 2;
-}
-
-/* ——— 3) Imagen principal centrada y contenida ——— */
-.galeria img {
   display: block;
-  margin: 0 auto;        /* centra en su contenedor */
-  max-height: calc(92vh - 180px); /* evita que tape las miniaturas */
-  height: auto;          /* deja que crezca con su proporción */
 }
 
-/* ——— 4) Miniaturas: centradas y con franja limpia ——— */
-.modal > footer {        /* si tu HTML tiene <footer> envolviendo .thumbs */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 8px;
-  border-top: 1px solid #ececec;
-  background: #fff;
-  border-radius: 0 0 12px 12px;
-}
-
-/* Si no usas <footer>, aplica estas a .thumbs igualmente */
-.thumbs {
-  display: flex;         /* en lugar de grid-auto-flow para centrar fácil */
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 8px;
-  max-width: 100%;
-  overflow-x: auto;
-}
-.thumbs img {
-  width: 96px;           /* un poco más uniformes */
-  height: 72px;
-  object-fit: cover;
-  border-radius: 8px;
-  opacity: 0.85;
-}
-.thumbs img.activa {
-  outline: 2px solid #0f172a;
-  opacity: 1;
-}
-
-/* ——— 5) Flechas centradas verticalmente (por si se movían) ——— */
-.nav {
-  align-items: center !important;
-}
-
-/* ——— 6) Responsive: un poco más de alto disponible en móvil ——— */
-@media (max-width: 768px) {
-  .galeria img {
-    max-height: calc(92vh - 220px);
-  }
-  .thumbs img {
-    width: 80px;
-    height: 60px;
-  }
-}
-
-/* NO hay encabezado de “Galería” ni contador en la página (solo modal) */
 
 /*CSS consultoria y fabricacion*/
 .scroll-container {
