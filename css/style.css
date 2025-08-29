@@ -712,6 +712,31 @@ header {
   }
 }
 
+.contenido {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;       /* evita que nada sobresalga */
+}
+
+.contenido .productos {
+  flex: 1;                /* que ocupe el espacio disponible */
+  overflow-y: auto;       /* scroll vertical */
+  padding-right: 6px;     /* espacio para que no se tape con la barra */
+}
+
+/* (Opcional) Estilizar scrollbar para que se vea más limpio */
+.contenido .productos::-webkit-scrollbar {
+  width: 8px;
+}
+.contenido .productos::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.contenido .productos::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
 /* NO hay encabezado de “Galería” ni contador en la página (solo modal) */
 
 /*CSS consultoria y fabricacion*/
