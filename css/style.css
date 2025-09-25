@@ -440,7 +440,7 @@ header {
   grid-template-columns: minmax(0,1fr) 460px; /* texto | imagen */
   gap: 24px;
   align-items: stretch;
-  margin: 32px 0;
+  margin: 100px 0;
 }
 .lista-productos.lista-productos--invert{
   grid-template-columns: 460px minmax(0,1fr); /* imagen | texto */

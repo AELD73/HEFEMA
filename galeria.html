@@ -1,544 +1,597 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos ACEMAFE</title>
-    <link rel="stylesheet" href="css/estios.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACEMAF</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-           <img src="imagenes/Logo Principal.png" alt="">
-           <p>ACEMAFE</p>
-       </div>
-        <div class="bars">
-           <div class="line"></div>
-           <div class="line"></div>
-           <div class="line"></div>
-         </div>
-   
-   
-           <nav class="nav-bar">
-               <ul>
-                   <li><a href="index.html">INICIO</a></li>
-                   <li><a href="galeria.html">GALERIA</a></li> <!--temporal-->
-                   <li><a href="index.html#sobreNosotros">SOBRE NOSTROS</a></li>
-                   <li><a href="#contacto">CONTACTO</a></li>
-               </ul>
-           </nav>
-       </header>
-       <script src="js/script.js"></script>
-       <!-- -----------------------------------------Inicio Slider---------------------------------------- -->
+      <div class="logo">
+        <a href="#inicio"><img src="imagenes/Logo Principal.png" alt="" /></a>
+       <b><p>ACEMAF</p></b> 
+      </div>
+      <div class="bars">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="galeria.html">PRODUCTOS</a></li>
+          <li><a href="#sobreNosotros">SOBRE NOSTROS</a></li>
+          <li><a href="#Contacto">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </header>
+    <script src="js/barra.js"></script>
 
     
-    <div id="galeria" class="galeria">
-        <h1>PRODUCTOS</h1>
-        <div class="contenedor-imagenes">
-            <div class="imagen">
-                <img src="imagenes/galeria1.jpg" alt="">
-                <div class="overlay">
-                    <h2>SAPO AUTOREULADOR No.8 de 115 LB/YD</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria2.png" alt="">
-                <div class="overlay">
-                    <h2>SAPO TIPO INDUSTRIAL No.8 DE 115 LB/YD</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria3.jpg" alt="">
-                <div class="overlay">
-                    <h2>SAPO CON INSERTO AM NO.8 DE 115 LB/YD</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria4.jpg" alt="">
-                <div class="overlay">
-                    <h2>AGUJAS DE 16'6" x 115 LB CON INSERTO AM</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria5.jpg" alt="">
-                <div class="overlay">
-                    <h2>OREJAS PARA AGUJA</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria6.png" alt="">
-                <div class="overlay">
-                    <h2>PUNTA DE AGUJA TIPO SAMSON CON RIEL DE APOYO</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria7.jpg" alt="">
-                <div class="overlay">
-                    <h2>PUNTA DE AGUJA DE 115 LB CON INSERTO AM</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria8.jpg" alt="">
-                <div class="overlay">
-                    <h2>CONTRARIELES DE 13' x 115 LB SIN EMPAQUES NI TORNILLOS</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria9.jpg" alt="">
-                <div class="overlay">
-                    <h2>CONTRARIELES DE 13' x 115 LB COMPLETOS ARMADOS</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria10.jpg" alt="">
-                <div class="overlay">
-                    <h2>CONTRARIELES DE 13' x 115 LB ARAMADO</h2>
-                </div>
-            </div>
-            <!--Primeras diez imagenes-->
-            <div class="imagen">
-                <img src="imagenes/galeria11.jpg" alt="">
-                <div class="overlay">
-                    <h2>GUARDA AGUJAS EN PROCESO</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria12.jpg" alt="">
-                <div class="overlay">
-                    <h2>GUARDA AGUJAS DE 1.00 M ARMADOS</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria13.jpg" alt="">
-                <div class="overlay">
-                    <h2>PROTECTOR DE AGUJAS TIPO CONTRARIEL</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria14.jpg" alt="">
-                <div class="overlay">
-                    <h2>PROTECTOR DE AGUJAS TIPO CONTRARIEL</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria15.jpg" alt="">
-                <div class="overlay">
-                    <h2>PROTECTOR DE PUNTA DE AGUJAS TIPO PASTILLA</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria16.jpg" alt="">
-                <div class="overlay">
-                    <h2>BLOCK TALON DE AGUJA DE 115 LB</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria17.jpg" alt="">
-                <div class="overlay">
-                    <h2>PERNO DE HOMBRO PARA BLOCK TALÓN DE AGUJA</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria18.jpg" alt="">
-                <div class="overlay">
-                    <h2>ARBOL DE CAMBIO BAJO 22E</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria19.jpg" alt="">
-                <div class="overlay">
-                    <h2>BANDERAS PARA ÁRBOL DE CAMBIO ALTO</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria20.jpg" alt="">
-                <div class="overlay">
-                    <h2>CUERPO DE ARBOL DE CAMBIO 56-B SEMIAUTOMATICO</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria21.jpg" alt="">
-                <div class="overlay">
-                    <h2>CUERPO DEL ÁRBOL DE CAMBIO ESQUELÉTICO 112-D</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria22.jpg" alt="">
-                <div class="overlay">
-                    <h2>ÁRBOL DE CAMBIO TIPO P PARA PAVIMENTO</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria23.jpg" alt="">
-                <div class="overlay">
-                    <h2>HORQUILLA Y PERNO DE OJO PARA ÁRBOL DE CAMBIO</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria24.jpg" alt="">
-                <div class="overlay">
-                    <h2>PLACAS CORREDERAS Y GEMELAS PARA HERRAJES DE CAMBIO</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria25.jpg" alt="">
-                <div class="overlay">
-                    <h2>PLACAS PARA CONTRARIEL</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria26.jpg" alt="">
-                <div class="overlay">
-                    <h2>PLACA ESCANTILLÓN 1-G</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria27.jpg" alt="">
-                <div class="overlay">
-                    <h2>VARILLAS DE CONEXIÓN NO.1 Y 2 DE 1/4"</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria28.jpg" alt="">
-                <div class="overlay">
-                    <h2>SILLETAS RÍGIDAS DE 115 LB</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria29.jpg" alt="">
-                <div class="overlay">
-                    <h2>DESCARRILADOR REVERSIBLE TIPO MAROMA</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria30.jpg" alt="">
-                <div class="overlay">
-                    <h2>PLACA U PARA AGUJA DESCARRILADORA</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria31.jpg" alt="">
-                <div class="overlay">
-                    <h2>TOPE DE FIN DE VÍA BUMPING POST</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria32.jpg" alt="">
-                <div class="overlay">
-                    <h2>TOPE DE FÍN DE VÍA DE MEDIA RUEDA</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria33.jpg" alt="">
-                <div class="overlay">
-                    <h2>TOPE PARA CARRO CLAMPING CHOCK</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria34.jpg" alt="">
-                <div class="overlay">
-                    <h2>PLANCHUELA DE CORDÓN DE 36" x 115 LB RE</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria35.jpg" alt="">
-                <div class="overlay">
-                    <h2>PLANCHUELA DE COMPROMISO DE 115 A 85 LB</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria36.jpg" alt="">
-                <div class="overlay">
-                    <h2>PLANCHUELAS AISLADAS PARA RIEL DE 115 LB</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria37.jpg" alt="">
-                <div class="overlay">
-                    <h2>KIT DE INSTALACIÓN PARA PLANCHUELAS AISLADAS</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria38.jpg" alt="">
-                <div class="overlay">
-                    <h2>PLANCHUELAS DE JOROBA PARA RIEL DE 115 LB</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria39.jpg" alt="">
-                <div class="overlay">
-                    <h2>ABRAZADERA TEMPORAL PARA MANTENIMIENTO 115</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria40.jpg" alt="">
-                <div class="overlay">
-                    <h2>TORNILLOS DE VIA</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria41.jpg" alt="">
-                <div class="overlay">
-                    <h2>TIRAFONDO JAB 173mm</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria42.jpg" alt="">
-                <div class="overlay">
-                    <h2>PLANCHUELAS ESPECIALES PARA DIFERENTES MEDIDAS DE RIEL</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria43.jpg" alt="">
-                <div class="overlay">
-                    <h2>VARILLAS TENSORAS DE ESCANTILLON TIPO J DE 1 1/4"</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria44.jpg" alt="">
-                <div class="overlay">
-                    <h2>CRUCERO DE VIA DE RIEL ARMADO DE 62° PARA RIEL DE 115 LB</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria45.jpg" alt="">
-                <div class="overlay">
-                    <h2>CRUCERO DE 25° CON INSERTOS DE ACERO MANGANESO</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria46.jpg" alt="">
-                <div class="overlay">
-                    <h2>RIELES FERROVIARIOS DE 115 LB/yD SECCION RE</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria47.jpg" alt="">
-                <div class="overlay">
-                    <h2>CLAVO DE VIA DE 5/8" x 6"</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria48.jpg" alt="">
-                <div class="overlay">
-                    <h2>PERNO SL GALVANIZADO PARA FIJACIONES EN DURMIENTE DE CONCRETO</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria49.jpg" alt="">
-                <div class="overlay">
-                    <h2>GRAPA NO.7 PARA FIJACIONES RNY</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria50.jpg" alt="">
-                <div class="overlay">
-                    <h2>CLIP ELÁSTICO "e" PARA FIJACION TIPO PANDROL</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria51.jpg" alt="">
-                <div class="overlay">
-                    <h2>PLACA ROLADA PARA DURMIENTE DE MADERA CON FIJACIÓN ELÁSTICA TIPO PANDROL</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria52.jpg" alt="">
-                <div class="overlay">
-                    <h2>CLIP NO.62 ATORNILLABLE PARA RIEL DE 115 LB</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria53.jpg" alt="">
-                <div class="overlay">
-                    <h2>TOPE DE PLÁSTICO (TACÓN) PARA FIJACIÓN ES</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria54.jpg" alt="">
-                <div class="overlay">
-                    <h2>TOPE PLÁSTICO (TACÓN) PARA FIJACIÓN GN</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria55.jpg" alt="">
-                <div class="overlay">
-                    <h2>TAQUETE PARA CONCRETO TIPO ARPON DE 3/4"x7"</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria56.jpg" alt="">
-                <div class="overlay">
-                    <h2>ANCLA TIPO WOODING PARA EL RIEL DE 115 LB</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria57.jpg" alt="">
-                <div class="overlay">
-                    <h2>ANCLA TIPO "J" PARA RIEL DE 115 LB</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria58.jpg" alt="">
-                <div class="overlay">
-                    <h2>PLACA DE ASIENTO DE 14" PARA EL RIEL DE 115 LB</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria59.jpg" alt="">
-                <div class="overlay">
-                    <h2>ARMÓN DE VÍA</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria60.jpg" alt="">
-                <div class="overlay">
-                    <h2>DURMIENTE DE CONCRETO I-84</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria61.jpg" alt="">
-                <div class="overlay">
-                    <h2>BIELDO DE 10 DIENTES PARA BALASTO</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria62.jpg" alt="">
-                <div class="overlay">
-                    <h2>IZADORA DE RIEL (PERROS) DE CADENA</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria63.jpg" alt="">
-                <div class="overlay">
-                    <h2>ESCANTILLÓN DE VÍA</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria64.jpg" alt="">
-                <div class="overlay">
-                    <h2>TROLLEY PARA ARRASTRE DE RIELES</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria65.jpg" alt="">
-                <div class="overlay">
-                    <h2>CRUCERO A NIVEL DEL RIEL ARMADO 10°</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria66.jpg" alt="">
-                <div class="overlay">
-                    <h2>SEÑALIZACIÓN DE FIN DE VÍA</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria67.jpg" alt="">
-                <div class="overlay">
-                    <h2>CLAVO DE VÍA DE 5/8" x 6"</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria68.jpg" alt="">
-                <div class="overlay">
-                    <h2>PLANCHUELA DE COMPROMISO DE 100 A 115 LB/YD</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria69.jpg" alt="">
-                <div class="overlay">
-                    <h2>GRAPA RN Y REFUERZO PARA DURMIENTE I-84</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria70.jpg" alt="">
-                <div class="overlay">
-                    <h2>BARRAS DE CONEXIÓN ÁRBOL ALTO Y BAJO</h2>
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="imagenes/galeria71.jpg" alt="">
-                <div class="overlay">
-                    <h2>TALADRO HIDRÁULICO PARA RIEL</h2>
-                </div>
-            </div>
-        </div>
+
+    <div class="lista-productos">
+      <div class="contenido">
+        <h1>MATERIALES FABRICADOS</h1>
+        <ul class="productos">
+          <li>
+            <span
+              >AGUJAS TIPO INSERTO E INDUSTRIALES EN DIFERENTES MEDIDAS</span
+            >
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>CONTRARIELES DE DIFERENTES MEDIDAS CON SUS EMPAQUES</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>PROTECTORES DE AGUJA TIPO CONTRARIEL CON SUS EMPAQUES</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span
+              >CRUCEROS DE VÍA SOBRE MEDIDA DE RIEL ARMADO, SÓLIDOS Y CON
+              INSERTOS DE ACERO MANGANESO</span
+            >
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span
+              >ÁRBOLES DE CAMBIO 56-B, 112-D, 51-A, 22-E Y TIPO P PARA
+              PAVIMENTO</span
+            >
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>BLOCK TALÓN DE AGUJA</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>PERNOS DE HOMBRO PARA BLOCK TALÓN</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>BARRAS DE CONEXIÓN PARA ÁRBOLES DE CAMBIO</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>BANDERAS PARA ÁRBOL DE CAMBIO</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span
+              >PLACAS PARA HERRAJES DE CAMBIO: CORREDERAS, GEMELAS, DE
+              CONTRARIEL, DE ESCANTILLÓN, DE BLOCK TALÓN</span
+            >
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>SILLETAS RÍGIDAS</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>VARILLAS DE CONEXIÓN NO. 1 Y 2</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>RIELES DE APOYO PARA AGUJA SAMSON</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>PROTECTORES DE AGUJA TIPO CONCHA DE ACERO MANGANESO</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>PLANCHUELAS DE COMPROMISO</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>ABRAZADERAS TEMPORALES DE UNION DE RIELES (BRIDAS)</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>DESCARRILADORES DE MAROMA Y AGUJAS DESCARRILADORAS</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span
+              >TOPES DE VÍA DE MEDIA RUEDA. BUMPING POSTS. CHOCK PARA CARRO DE
+              FERROCARRIL</span
+            >
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>ARMONES, RODILLOS Y TROLLEYS PARA RIELES</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>AGUJAS ESPECIALES PARA MINERÍA</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="imagen">
+        <img src="imagenes/tren-1.jpg" alt="Imagen de productos ferroviarios" />
+      </div>
     </div>
-    <script src="js/galeria.js"></script>
+
+    <!-- ====== BLOQUE 2 ====== -->
+    <div class="lista-productos lista-productos--invert">
+      <div class="imagen">
+        <img src="imagenes/tren-1.jpg" alt="Imagen de productos ferroviarios" />
+      </div>
+      <div class="contenido">
+        <h1>MATERIALES COMERCIALIZADOS</h1>
+        <ul class="productos">
+          <li>
+            <span
+              >RIELES FERROVIARIOS Y PARA GRÚA EN DIFERENTES CALIBRES. NUEVO Y
+              USADO</span
+            >
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span
+              >SAPOS TIPO INDUSTRIAL, AUTORESGUARDADOS Y CON INSERTO DE ACERO
+              MANGANESO</span
+            >
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>ENDURECIDOS POR GOLPETEO O POR EXPLOSIVOS</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>DURMIENTES DE CONCRETO I-84</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span
+              >DURMIENTES DE MADERA DE PINO Y ENCINO, ESTANDAR Y PARA CAMBIO DE
+              VÍA</span
+            >
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>SOLDADURA ALUMINOTÉRMICA PARA RIELES</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>AGUJAS TIPO SAMSON</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span
+              >JUEGOS DE FIJACIÓN RNY, GN Y ES CON TODOS SU COMPONENTES POR
+              SEPARADO</span
+            >
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>CLIPS ESPECIALES PARA FIJACIÓN DE RIEL</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>CLAVO DE VÍA</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>TORNILLOS DE VÍA Y TORNILLOS ESPECIALES FERROVIARIOS</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>PLACAS DE ASIENTO EN DIFERENTES MEDIDAS</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>TIRAFONDOS</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>PLACAS ROLADAS PARA CLIP e</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>CLIP e</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>PLANCHUELAS DE CORDÓN, DE JOROBA, AISLADAS</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>PLACAS ESPECIALES PARA HERRAJES AISLADOS</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>SILLETAS AJUSTABLES</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+          <li>
+            <span>HERRAMIENTA DE VÍA Y MAQUINARIA LIGERA</span>
+            <div class="acciones">
+              <button class="btn-ver">Ver fotos</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ====== GALERÍA / VISOR ====== -->
+    <div class="modal-backdrop" id="modalFotos" aria-hidden="true">
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitulo"
+      >
+        <div id="header_galeria">
+          <h2 id="modalTitulo">Galería</h2>
+          <button class="cerrar" data-accion="cerrar">X</button>
+        </div>
+        <div class="galeria">
+          <img id="imgPrincipal" alt="Imagen del producto" />
+          <div class="nav">
+            <button data-accion="prev" aria-label="Anterior">◀</button>
+            <button data-accion="next" aria-label="Siguiente">▶</button>
+          </div>
+        </div>
+        <footer>
+          <div class="thumbs" id="miniaturas"></div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("load", ajustarAltura);
+      window.addEventListener("resize", ajustarAltura);
+
+      function ajustarAltura() {
+        const contenido = document.querySelector(".contenido");
+        const imagen = document.querySelector(".imagen");
+
+        if (contenido && imagen) {
+          const alturaLista = contenido.offsetHeight;
+          imagen.style.height = alturaLista + "px";
+        }
+      }
+    </script>
+    <script>
+      /* ========= Config ========= */
+      const CARPETA = "imagenes";
+      const PATRON = (n) => `galeria${n}.wepb`; // tu convención
+      const FALLBACK = (n) => `galeria${n}.webp`; // por si algunas están en .webp
+      const MAPEO_JSON_URL = "mapeo.json";
+
+      /* ========= Estado ========= */
+      let mappingRaw = {};
+      let mappingClean = {};
+      let galeriaActual = { nombre: "", indices: [], pos: 0 };
+      const backdrop = document.getElementById("modalFotos");
+
+      /* ========= Util: normalizar clave ========= */
+      function normalizeKey(s) {
+        return String(s || "")
+          .replace(/\s+/g, " ")
+          .trim()
+          .normalize("NFD")
+          .replace(/\p{Diacritic}/gu, "")
+          .toLowerCase();
+      }
+
+      /* ========= Cargar mapeo.json ========= */
+      (async function cargarMapeo() {
+        try {
+          const r = await fetch(MAPEO_JSON_URL, { cache: "no-store" });
+          if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+          mappingRaw = await r.json();
+          for (const k of Object.keys(mappingRaw)) {
+            const arr = (mappingRaw[k] || [])
+              .map(Number)
+              .filter(Number.isFinite);
+            if (!arr.length) continue;
+            mappingClean[normalizeKey(k)] = Array.from(new Set(arr)).sort(
+              (a, b) => a - b
+            );
+          }
+        } catch (e) {
+          console.warn("No se pudo cargar mapeo.json:", e);
+          mappingRaw = {};
+          mappingClean = {};
+        }
+      })();
+
+      /* ========= Click en “Ver fotos” ========= */
+      document.addEventListener("click", (ev) => {
+        const btn = ev.target.closest(".btn-ver");
+        if (btn) {
+          const li = btn.closest("li");
+          const nombre = (
+            li.querySelector("span")?.textContent ||
+            li.textContent ||
+            ""
+          ).trim();
+          abrirGaleria(nombre);
+        }
+        const cerrar = ev.target.closest('[data-accion="cerrar"]');
+        if (cerrar) cerrarModal();
+        const navPrev = ev.target.closest('[data-accion="prev"]');
+        const navNext = ev.target.closest('[data-accion="next"]');
+        if (navPrev) mover(-1);
+        if (navNext) mover(+1);
+      });
+
+      /* ========= Modal events ========= */
+      backdrop.addEventListener("click", (e) => {
+        if (e.target === backdrop) cerrarModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (!backdrop.classList.contains("abierta")) return;
+        if (e.key === "Escape") cerrarModal();
+        if (e.key === "ArrowLeft") mover(-1);
+        if (e.key === "ArrowRight") mover(+1);
+      });
+
+      /* ========= Lógica de galería ========= */
+      function abrirGaleria(nombreProducto) {
+        if (!Object.keys(mappingClean).length) {
+          alert(
+            "No se pudo cargar mapeo.json. Usa un servidor local o verifica la ruta."
+          );
+          return;
+        }
+        let indices = mappingRaw[nombreProducto];
+        if (!indices || !indices.length)
+          indices = mappingClean[normalizeKey(nombreProducto)];
+        if (!indices || !indices.length) {
+          alert("No hay imágenes para:\n\n" + nombreProducto);
+          return;
+        }
+        galeriaActual = {
+          nombre: nombreProducto,
+          indices: indices.map(Number).sort((a, b) => a - b),
+          pos: 0,
+        };
+        document.getElementById("modalTitulo").textContent = nombreProducto;
+        renderGaleria();
+        abrirModal();
+      }
+      function srcs(n) {
+        return {
+          preferida: `${CARPETA}/${PATRON(n)}`,
+          backup: `${CARPETA}/${FALLBACK(n)}`,
+        };
+      }
+      function renderGaleria() {
+        const img = document.getElementById("imgPrincipal");
+        const thumbs = document.getElementById("miniaturas");
+        const { indices, pos } = galeriaActual;
+        const actual = indices[pos];
+        const { preferida, backup } = srcs(actual);
+
+        img.dataset.fallbackTried = "";
+        img.src = preferida;
+        img.onerror = () => {
+          if (img.dataset.fallbackTried) return;
+          img.dataset.fallbackTried = "1";
+          img.src = backup;
+        };
+
+        thumbs.innerHTML = "";
+        indices.forEach((n, i) => {
+          const t = document.createElement("img");
+          t.src = srcs(n).preferida;
+          t.onerror = () => {
+            t.src = srcs(n).backup;
+          };
+          if (i === pos) t.classList.add("activa");
+          t.alt = `galeria${n}`;
+          t.addEventListener("click", () => {
+            galeriaActual.pos = i;
+            renderGaleria();
+          });
+          thumbs.appendChild(t);
+        });
+      }
+      function mover(delta) {
+        const { indices } = galeriaActual;
+        galeriaActual.pos =
+          (galeriaActual.pos + delta + indices.length) % indices.length;
+        renderGaleria();
+      }
+      function abrirModal() {
+        backdrop.classList.add("abierta");
+        backdrop.setAttribute("aria-hidden", "false");
+      }
+      function cerrarModal() {
+        backdrop.classList.remove("abierta");
+        backdrop.setAttribute("aria-hidden", "true");
+      }
+    </script>
+
+    <!--Consultoria-->
+
     
-    <!-- Inicio de footer (Propuesta de segundo formulario)-->
 
+    
 
-<footer id="contacto" class="footer">
-    <div class="conteiner">
+    <footer id="Contacto" class="footer">
+      <div class="conteiner">
         <div class="footer-row">
+          <div class="footer-links">
+            <h4>CONTACTO</h4>
 
-            <div class="footer-links">
-                <h4>CONTACTO</h4>
-                <ul>
-                    <li>Dirección: CC TERRACERIA P17, LT 2 Z 1P1 1, COL. OJO DE AGUA, TECAMAC, EDO. DE MÉXICO. C.P. 55770</li>
-                    <li>Telefono: 55 6234 6183 </li>
-                    <li>Correo electronico: javier.rodriguez@acemafe.com.mx</li>
-                </ul>
+            <ul>
+              <li>
+                Dirección: CC TERRACERIA P17, LT 2 Z 1P1 1, COL. OJO DE AGUA,
+                TECAMAC, EDO. DE MÉXICO. C.P. 55770
+              </li>
+              <li>Telefono: 55 6234 6183</li>
+              <li>Correo electronico: javier.rodriguez@acemafe.com.mx</li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>REDES SOCIALES</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/hefema99/"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://maps.app.goo.gl/ZDfqskfEcKromXYz7"
+                ><i class="fa-solid fa-map-location-dot"></i
+              ></a>
             </div>
+          </div>
 
-            <div class="footer-links">
-                <h4>REDES SOCIALES</h4>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/hefema99/"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://maps.app.goo.gl/ZDfqskfEcKromXYz7"><i class="fa-solid fa-map-location-dot"></i></a>
+          <div class="footer-links">
+            <h4>ENVIANOS UN MENSAJE</h4>
+            <div class="social-links">
+              <div class="form-content1">
+                <form
+                  action="https://formsubmit.co/javier.rodriguez@acemafe.com.mx"
+                  method="POST"
+                >
+                  <div class="form-content">
+                    <input type="text" name="Nombre" id="nombre" required />
+                    <label for="nombre">NOMBRE</label>
+                  </div>
 
-                </div>
+                  <div class="form-content">
+                    <input type="text" name="Correo" id="email" required />
+                    <label for="email">CORREO ELECTRONICO</label>
+                  </div>
+
+                  <div class="form-content">
+                    <input type="text" name="Telefono" id="telefono" required />
+                    <label for="telefono">TELEFONO</label>
+                  </div>
+
+                  <div class="form-content">
+                    <textarea
+                      name="Asunto"
+                      id="mensaje"
+                      cols="30"
+                      rows="5"
+                      required
+                    ></textarea>
+                    <label for="mensaje">MENSAJE</label>
+                  </div>
+                  <input class="btn1" type="submit" value="ENVIAR" />
+                </form>
+              </div>
+              <script src="js/formulario.js"></script>
             </div>
-
-            <div class="footer-links">
-                <h4>ENVIANOS UN MENSAJE</h4>
-                <div class="social-links">
-                    <div class="form-content1">
-                        <form action="https://formsubmit.co/javier.rodriguez@acemafe.com.mx" method="POST">
-                            <div class="form-content">
-                                <input type="text" name="Nombre" id="nombre" required>
-                                <label for="nombre">NOMBRE</label>
-                            
-                            </div>
-                            
-                            <div class="form-content">
-                                <input type="text" name="Correo" id="email" required>
-                                <label for="email">CORREO ELECTRONICO</label>
-                                
-                            </div>
-                            
-                            <div class="form-content">
-                                <input type="text" name="Telefono" id="telefono" required>
-                                <label for="telefono">TELEFONO</label>
-                                
-                            </div>
-
-                            
-                            <div class="form-content">
-                                <textarea name="Asunto" id="mensaje" cols="30" rows="5" required></textarea>
-                                <label for="mensaje">MENSAJE</label>
-                                
-    
-                            </div>
-                            <input class="btn1" type="submit" value="ENVIAR">
-                        </form>
-                           
-                    </div>
-                    <script src="js/formulario.js"></script>
-                
-                            
-
-                </div>
-            </div>
-
-
+          </div>
         </div>
-    </div>
+      </div>
+    </footer>
 
-</footer>
-
-
-</body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/anuncio.js"></script>
+  </body>
 </html>
